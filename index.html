@@ -1,0 +1,1614 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>COMP2611 期中备考手册</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#203248;background:#f3f5f7;font-family:'Microsoft YaHei','Noto Sans SC',sans-serif;font-size:16px;line-height:1.85}header{background:#132e4c;color:white;padding:35px 42px}header h1{margin:0;font-size:29px}header p{color:#d3e3ef;margin:6px 0}nav{position:sticky;top:0;z-index:3;display:flex;flex-wrap:wrap;gap:8px;background:#fff;padding:12px 30px;border-bottom:1px solid #d4dce4}nav a{color:#155873;padding:4px 10px;text-decoration:none;background:#edf4f7;border-radius:5px;font-size:14px}main{max-width:1100px;margin:28px auto;padding:0 25px}article{background:white;padding:35px 45px;margin-bottom:25px;border:1px solid #dde4ea;border-radius:10px;scroll-margin-top:120px}h1{font-size:27px;color:#163d5d}h2{font-size:23px;border-bottom:2px solid #d7e7ee;padding-bottom:8px;margin-top:38px;color:#174660}h3{font-size:19px;margin-top:27px}p{margin:14px 0}code{font-family:Consolas,'Microsoft YaHei',monospace;background:#edf3f6;border-radius:3px;padding:1px 4px;font-size:.94em}pre{background:#102d46;color:#e8f4fc;border-radius:6px;padding:18px;overflow:auto;line-height:1.65}pre code{background:none;padding:0;font-size:15px}table{border-collapse:collapse;width:100%;margin:20px 0;font-size:15px}th,td{border:1px solid #d9e3ea;padding:9px 12px;text-align:left;overflow-wrap:anywhere}th{background:#edf5f8;color:#164c66}tr:nth-child(even){background:#fafcfd}img{display:block;max-width:100%;height:auto;margin:24px auto}strong{color:#124f69}li{margin:7px 0}details{border:1px solid #acc8d4;background:#f8fbfd;padding:15px 20px;border-radius:6px;margin:25px 0}summary{cursor:pointer;font-weight:bold;color:#14617a}.notes{margin-top:30px;border-top:1px dashed #b6cad4;padding-top:20px}.notes label{display:block;font-weight:bold;font-size:14px}textarea{width:100%;min-height:120px;margin-top:10px;padding:12px;border:1px solid #bdd0db;border-radius:6px;font:15px/1.7 'Microsoft YaHei',sans-serif}button{background:#155873;color:white;border:0;border-radius:4px;padding:8px 13px;cursor:pointer;margin-right:10px}.toolbar{max-width:1100px;margin:20px auto;padding:0 25px;font-size:14px}footer{text-align:center;padding:30px;color:#5b7286}@media(max-width:700px){article{padding:20px}main{padding:0 10px}header{padding:25px}nav{position:static;padding:10px}table{font-size:12px}td,th{padding:6px}pre code{font-size:13px}}@media print{body{background:white;font-size:11pt}header{background:white;color:#163d5d;padding:0}header p{color:#36566f}nav,.toolbar,.notes,footer{display:none}main{max-width:none;padding:0}article{border:0;padding:0;break-before:page}article:first-child{break-before:auto}pre{background:#eef3f6;color:#163048;white-space:pre-wrap;break-inside:avoid}table{font-size:9pt}h1,h2,h3{break-after:avoid}img{max-height:230px}details{border:0;padding:0;background:white}}header h1{color:white}.table-wrap{max-width:100%;overflow-x:auto}p,li{overflow-wrap:anywhere}pre{max-width:100%}@media(max-width:700px){table{min-width:500px}.toolbar span{display:block;margin-top:10px}}@media print{header h1{color:#163d5d}.table-wrap{overflow:visible}table{min-width:0}}</style><meta name="description" content="COMP2611 期中复习：MIPS 课件页码讲解、双语术语、Homework 2 教学、原创练习与评分。"></head><body><header><h1>COMP2611｜期中备考手册</h1><p>课件页码对照 · 中英术语 · Homework 2 · 原创新题与评分</p><p>先完成 10 月 15 日作业，再准备 10 月 22 日期中考试</p></header><nav><a href="#part0">00 阅读导航</a><a href="#part1">01 Homework 2 逐题教学</a><a href="#part2">02 MIPS 按课件精讲</a><a href="#part3">03 前序课程复习与考点</a><a href="#part4">04 原创分模块练习</a><a href="#part5">05 答案与评分</a></nav><div class="toolbar"><button id="download">下载我的笔记</button><button id="print">打印手册（含答案）</button><span id="status">笔记保存在本机当前浏览器；建议下载备份。</span></div><main><article id="part0"><h1 id="p0-COMP2611%20%E6%9C%9F%E4%B8%AD%E5%A4%87%E8%80%83%E5%AD%A6%E4%B9%A0%E5%8C%85">COMP2611 期中备考学习包</h1>
+<p>这是一份按你提供的 Fall 2026 材料整理的中文教学手册，保留重要英文术语与英文练习题干。先学会方法，再用新题检验，不直接复用旧期中题。</p>
+<h2 id="p0-%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BC%80%E5%A7%8B">从哪里开始</h2>
+<ol>
+<li><strong>今天先读《Homework2 逐题教学》</strong>。完成作业后做结尾的 3 道迁移练习，避免只记住原题答案。</li>
+<li><strong>《MIPS 按课件精讲》</strong>：打开正式 MIPS PDF 并排阅读；每节都有 PDF 页码与“课件旁注”，可直接抄在对应页旁。按“寄存器 → 内存 → 控制流 → 编码”连贯学习。</li>
+<li><strong>《前序课程复习与考点》</strong>：按模块复习 Introduction、逻辑电路、数制与浮点，查看哪些旧题内容超出当前范围。</li>
+<li><strong>《原创分模块练习》</strong>：12 题、100 分、建议 90 分钟；英文题干覆盖当前范围。答题时先不打开答案。</li>
+<li><strong>《练习答案与评分》</strong>：按过程给分、找错因，再回到相应页重学。</li>
+</ol>
+<p>本页是完整合订版；有章节跳转、练习答案折叠、可保存到当前浏览器的笔记区。本地学习包另有 6 个 Markdown 文本文件。页面笔记保存在本机浏览器，还可下载为文本作备份；不会自动写进原始课件。</p>
+<h2 id="p0-%E5%B7%B2%E6%A0%B8%E5%AF%B9%E7%9A%84%E8%8C%83%E5%9B%B4">已核对的范围</h2>
+<p>期中说明截图位于 <code>midterm/midterm说明.docx</code>：10 月 22 日 19:30–21:00，LTB/LTC，闭卷闭笔记，无电子设备，提供 MIPS green sheet，占 30%。相关 tutorials/labs 也在范围内。</p>
+<p>正式 MIPS PDF 共 103 页，第 64 页为 Procedure 章节封面，所以主体讲解为 PDF p1–63。MIPS 手写材料的函数、递归与后续详细寻址规则超出主线时已标注为补充。</p>
+<p>Homework 2：10 月 15 日 23:59 HKT 截止，共 50 分。学习包提供过程教学和核验，不替你提交 Canvas。</p>
+<h2 id="p0-%E6%9D%90%E6%96%99%E9%98%85%E8%AF%BB%E7%B4%A2%E5%BC%95">材料阅读索引</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>文件</th>
+<th>本包使用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Introduction，30 页</td>
+<td>数制、单位、抽象、ISA、组成与技术趋势复习</td>
+</tr>
+<tr>
+<td>DigitalLogic，59 页</td>
+<td>门、真值表、SOP/POS、PLA、K-map、latch/FF</td>
+</tr>
+<tr>
+<td>DataRepresentation，38 页</td>
+<td>补码、扩展、IEEE、自定义格式、ASCII</td>
+</tr>
+<tr>
+<td>MIPS，103 页</td>
+<td>前 63 页详讲；64 为章节封面；后续不纳入核心习题</td>
+</tr>
+<tr>
+<td>Handwritten_DataRep，14 页</td>
+<td>视觉核对补码解释、浮点分布、范围与精度</td>
+</tr>
+<tr>
+<td>Handwritten_DigitalCircuit，18 页</td>
+<td>视觉核对门、MUX、PLA、K-map、锁存器和主从 FF</td>
+</tr>
+<tr>
+<td>Handwritten_MIPS，20 页</td>
+<td>前 12 页对应核心；13–17 页函数递归；18–20 页执行与寻址补充</td>
+</tr>
+<tr>
+<td>Tutorial 00–05</td>
+<td>数制、组合、时序、整数、浮点、MIPS 分模块练习风格</td>
+</tr>
+<tr>
+<td>Lab 01–03</td>
+<td>Logisim 门、latch/FF、写使能、register file 的概念</td>
+</tr>
+<tr>
+<td>Lab 04–05</td>
+<td>MARS syscall、程序窗口、猜数游戏与循环；纳入核心复习</td>
+</tr>
+<tr>
+<td>HW1，7 页</td>
+<td>布尔化简、设计步骤、K-map、时序；未复制作业原题作新练习</td>
+</tr>
+<tr>
+<td>HW2，6 页</td>
+<td>逐题讲清过程，特别处理 toward-zero、subnormal、最大整数</td>
+</tr>
+<tr>
+<td>2012 旧期中答案，11 页</td>
+<td>借鉴表示、组合逻辑、MUX、MIPS 的考法，区分超范围性能题</td>
+</tr>
+<tr>
+<td>2013 旧期中答案，15 页</td>
+<td>借鉴程序追踪、编码、位域提取的考法，区分函数、ALU、datapath 等</td>
+</tr>
+</tbody></table></div>
+<p>页码均指 PDF 的物理页码，不是手写截图里旧版本的编号。原课件未修改，原始课程文件未上传到此公开网站。</p>
+<h2 id="p0-%E7%AC%94%E8%AE%B0%E6%80%8E%E4%B9%88%E5%86%99%E6%89%8D%E5%AF%B9%E8%80%83%E8%AF%95%E6%9C%89%E7%94%A8">笔记怎么写才对考试有用</h2>
+<p>每节只在课件旁写三类内容：<strong>规则、易错点、自己的例子</strong>。例如 MIPS p18 写 <code>address=base+4i</code>，p27 写 <code>andi zero-extends</code>，p55 写 <code>rs rt rd ≠ assembly operand order</code>。再写一句自己为什么曾经错。闭卷时能用这句规则重建解题过程，比复制整页答案更有效。</p>
+<section class="notes"><label for="note0">我的笔记｜阅读导航（当前浏览器自动保存）</label><textarea id="note0" data-note="0" placeholder="记录对应课件页码、规则、错因和自己的例子"></textarea></section></article><article id="part1"><h1 id="p1-Homework%202%EF%BC%9A%E5%85%88%E5%AD%A6%E4%BC%9A%E6%96%B9%E6%B3%95%EF%BC%8C%E5%86%8D%E5%86%99%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BF%87%E7%A8%8B">Homework 2：先学会方法，再写自己的过程</h1>
+<p>依据：<code>homework/COMP2611HW2Fall26.pdf</code>，共 6 页、50 分。截止 <strong>2026 年 10 月 15 日 23:59 HKT</strong>。香港与北京时间相同。先完成这份，再进入 MIPS 系统学习。</p>
+<p>提交到 Canvas → Assignments → Homework 2，单个 <code>homework2_&lt;studentID&gt;.pdf</code>，或按页排序照片组成的同名 ZIP。姓名、学号、邮箱要填写，提交后打开检查。第 2、3 题每个小题都要有推导；第 1(b)(2) 要解释范围。这里是教学参考，请先遮住答案自己尝试，再用推导核对。</p>
+<h2 id="p1-0.%20%E4%BD%A0%E5%8F%AA%E9%9C%80%E8%A6%81%E5%85%88%E6%8E%8C%E6%8F%A1%E8%BF%99%E4%BA%94%E4%BB%B6%E4%BA%8B">0. 你只需要先掌握这五件事</h2>
+<ol>
+<li><strong>Two&#39;s complement（补码）</strong>：n 位范围是 <code>−2^(n−1)</code> 到 <code>2^(n−1)−1</code>。先检查范围，再编码。</li>
+<li><strong>Bit pattern（位模式）</strong> 与 <strong>value（数值）</strong> 不同。十六进制只是同一组位的紧凑写法。</li>
+<li><strong>Normalized number（规格化数）</strong>：<code>x = (−1)^S × (1+F/2^f) × 2^(E−B)</code>。</li>
+<li><strong>Subnormal / denormalized number（非规格化数）</strong>：<code>x = (−1)^S × (F/2^f) × 2^(1−B)</code>，没有隐含的 1。</li>
+<li><strong>Rounding toward zero（向零舍入）</strong>：保留可容纳的有效位，丢掉后续位，不进位。对负数，结果应变得没那么负。</li>
+</ol>
+<p>这里 <code>F</code> 既可表示 fraction field（小数字段）的位串，也可表示该位串对应的无符号整数；写 <code>F/2^f</code> 时使用整数含义。<code>E</code> 是 stored exponent（存储指数）；<code>e=E−B</code> 才是实际指数。浮点数负号只改变 S，不能把整个浮点位串取补码。</p>
+<h2 id="p1-1.%20Q1(a)%EF%BC%9A%E8%AF%BB%E6%87%82%2016%20%E4%BD%8D%E8%A1%A5%E7%A0%81%EF%BD%9C%E5%8E%9F%E9%A2%98%E7%AC%AC%202%20%E9%A1%B5">1. Q1(a)：读懂 16 位补码｜原题第 2 页</h2><p class="slide-link">对照本地 Homework 2 原题第 2 页（原始材料未上传）</p>
+<h3 id="p1-(1)%201101%200101%201010%200110">(1) <code>1101 0101 1010 0110</code></h3>
+<p>每四位换成一位十六进制：<code>1101=D, 0101=5, 1010=A, 0110=6</code>，得到 <strong>0xD5A6</strong>。</p>
+<p>最高位为 1，按补码解释是负数。最快的读法是先把整个位串当无符号数 U，再减去 <code>2^16</code>：</p>
+<pre><code class="language-text">U = 13×4096 + 5×256 + 10×16 + 6 = 54694
+x = 54694 − 65536 = −10842
+</code></pre>
+<p>也可取反加一得到 <code>0010 1010 0101 1010 = 0x2A5A = 10842</code>，原值就是 <strong>−10842</strong>。两种方法相互核验。</p>
+<h3 id="p1-(2)%200001%200110%201011%201101">(2) <code>0001 0110 1011 1101</code></h3>
+<p>最高位为 0，所以直接求值：</p>
+<pre><code class="language-text">Hex = 0x16BD
+x = 1×4096 + 6×256 + 11×16 + 13 = 5821
+</code></pre>
+<p><strong>自检</strong>：第一个负、第二个正；十六进制均为 4 位。</p>
+<h2 id="p1-2.%20Q1(b)%EF%BC%9A12%20%E4%BD%8D%E8%A1%A5%E7%A0%81%EF%BD%9C%E5%8E%9F%E9%A2%98%E7%AC%AC%202%20%E9%A1%B5">2. Q1(b)：12 位补码｜原题第 2 页</h2><p class="slide-link">对照本地 Homework 2 原题第 2 页（原始材料未上传）</p>
+<p>12 位范围：<code>[−2048, 2047]</code>。</p>
+<h3 id="p1-(1)%20%E2%88%92935">(1) −935</h3>
+<p>935 在范围内，其正值展开为 <code>512+256+128+32+4+2+1</code>。</p>
+<pre><code class="language-text">+935：0011 1010 0111 = 0x3A7
+取反：1100 0101 1000
+加一：1100 0101 1001 = 0xC59
+</code></pre>
+<p>答案 <strong><code>1100 0101 1001</code>，0xC59</strong>。核验：<code>0xC59 = 3161</code>，<code>3161−4096=−935</code>。</p>
+<h3 id="p1-(2)%20%E2%88%922057">(2) −2057</h3>
+<p><code>−2057 &lt; −2048</code>，所以 <strong>不能表示</strong>。不能写截断后绕回来的位串。</p>
+<p>可用的英文解释：<strong>“A 12-bit two&#39;s complement integer ranges from −2048 to 2047. Since −2057 is below the minimum, it is not representable.”</strong></p>
+<h2 id="p1-3.%20Q2(a)%EF%BC%9A%E5%8D%81%E8%BF%9B%E5%88%B6%20%E2%86%92%20%E5%8D%95%E7%B2%BE%E5%BA%A6%E6%B5%AE%E7%82%B9%EF%BD%9C%E5%8E%9F%E9%A2%98%E7%AC%AC%203%20%E9%A1%B5">3. Q2(a)：十进制 → 单精度浮点｜原题第 3 页</h2><p class="slide-link">对照本地 Homework 2 原题第 3 页（原始材料未上传）</p>
+<p>单精度 <strong>single precision</strong>：<code>S 1 位 | E 8 位 | F 23 位</code>，<strong>bias（偏置）</strong> B=127。顺序：转二进制 → 规格化 → 求指数 → 去掉隐含 1 → 填满 23 位 → 判断 exactness（精确性）。</p>
+<h3 id="p1-(1)%20%2B1453.625">(1) +1453.625</h3>
+<p>整数：<code>1453=1024+256+128+32+8+4+1</code>，故 <code>1453=10110101101₂</code>。</p>
+<p>小数：<code>.625=.5+.125=.101₂</code>。</p>
+<pre><code class="language-text">1453.625 = 10110101101.101₂
+         = 1.0110101101101₂ × 2^10
+S = 0
+e = 10，E = 10+127 = 137 = 10001001₂
+F = 0110101101101 后补 10 个 0
+</code></pre>
+<p>完整答案：<strong><code>0 10001001 01101011011010000000000</code></strong>。</p>
+<p>精确：二进制小数终止，而且规格化后只需 13 位小数，能放进 23 位 F。可写：<strong>“The binary expansion terminates and fits in the 23-bit fraction field, so the representation is exact.”</strong> 十六进制核验 <code>0x44B5B400</code>；不能用它替代 S/E/F。</p>
+<h3 id="p1-(2)%20%E2%88%920.3%EF%BC%9A%E5%BF%85%E9%A1%BB%E5%90%91%E9%9B%B6%E8%88%8D%E5%85%A5">(2) −0.3：必须向零舍入</h3>
+<p>先把 <code>0.3=3/10</code> 看成正数，乘二取整：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>当前小数 × 2</th>
+<th>取出的位</th>
+<th>留下的小数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.3×2=0.6</td>
+<td>0</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>0.6×2=1.2</td>
+<td>1</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>0.2×2=0.4</td>
+<td>0</td>
+<td>0.4</td>
+</tr>
+<tr>
+<td>0.4×2=0.8</td>
+<td>0</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>0.8×2=1.6</td>
+<td>1</td>
+<td>0.6，开始重复</td>
+</tr>
+</tbody></table></div>
+<p>因此 <code>0.3=0.01001100110011…₂ = 1.0011001100110011…₂ × 2^(−2)</code>。</p>
+<pre><code class="language-text">S = 1
+e = −2，E = 125 = 01111101₂
+F 的前 23 位 = 00110011001100110011001
+舍去的后续位 = 1001100…；按向零规则不进位
+</code></pre>
+<p>答案：<strong><code>1 01111101 00110011001100110011001</code></strong>，核验 <code>0xBE999999</code>。</p>
+<p>无法精确表示：约分后的分母 10 含有因子 5，二进制展开无限循环，有限位 F 无法保存全部位。</p>
+<p>更强的核验：该区间相邻浮点间距 <code>Δ=2^(−2−23)=2^(−25)</code>。<code>0.3×2^25=10066329.6</code>，向零选取整数 10066329，故结果是</p>
+<pre><code class="language-text">−10066329 / 33554432
+= −0.2999999821186065673828125
+</code></pre>
+<p>它在 −0.3 右侧，离零更近；相邻更负的浮点是 <code>−10066330/33554432</code>。默认最近舍入通常会给 <code>0xBE99999A</code>，本题不能使用默认结果。</p>
+<p>英文理由：<strong>“The binary expansion is recurring. Rounding toward zero truncates the fraction to 23 bits without incrementing it.”</strong></p>
+<h2 id="p1-4.%20Q2(b)%EF%BC%9A%E5%85%88%E5%88%86%E7%B1%BB%EF%BC%8C%E5%86%8D%E8%A7%A3%E7%A0%81%EF%BD%9C%E5%8E%9F%E9%A2%98%E7%AC%AC%204%20%E9%A1%B5">4. Q2(b)：先分类，再解码｜原题第 4 页</h2><p class="slide-link">对照本地 Homework 2 原题第 4 页（原始材料未上传）</p>
+<h3 id="p1-(1)%201%2010000001%2001010010100100000000000">(1) <code>1 10000001 01010010100100000000000</code></h3>
+<p><code>S=1, E=129</code>，E 不是全 0 或全 1，是规格化数。</p>
+<pre><code class="language-text">e = 129−127 = 2
+significand = 1.010100101001₂
+            = 1+2^−2+2^−4+2^−7+2^−9+2^−12
+x = −(1+2^−2+2^−4+2^−7+2^−9+2^−12)×2^2
+  = −5417/1024
+  = −5.2900390625
+</code></pre>
+<p>上面的小数是<strong>精确十进制</strong>，不是近似值。写成 −5.29 会丢失题目要求的精确性。</p>
+<h3 id="p1-(2)%200%2000000000%2010010100010101000000000">(2) <code>0 00000000 10010100010101000000000</code></h3>
+<p><code>S=0, E=0, F≠0</code>，这是 <strong>subnormal number（非规格化数）</strong>。</p>
+<pre><code class="language-text">effective exponent（有效指数）= 1−127 = −126
+significand = 0.10010100010101₂
+            = 2^−1+2^−4+2^−6+2^−10+2^−12+2^−14
+x = (2^−1+2^−4+2^−6+2^−10+2^−12+2^−14)×2^−126
+  = 2^−127+2^−130+2^−132+2^−136+2^−138+2^−140
+</code></pre>
+<p>这是最方便提交的<strong>精确表达式</strong>。不能套用 <code>1.F</code>，也不能把指数写成 <code>0−127</code>。</p>
+<h2 id="p1-5.%20Q3(a)%EF%BC%9A%E8%AE%BE%E8%AE%A1%E6%A0%BC%E5%BC%8F%E6%97%B6%E5%85%88%E8%A7%A3%E5%86%B3%E8%8C%83%E5%9B%B4%EF%BD%9C%E5%8E%9F%E9%A2%98%E7%AC%AC%205%20%E9%A1%B5">5. Q3(a)：设计格式时先解决范围｜原题第 5 页</h2><p class="slide-link">对照本地 Homework 2 原题第 5 页（原始材料未上传）</p>
+<p>总 16 位，S=1 位，E=k 位，F=f=15−k 位，B=<code>2^(k−1)−1</code>。E=0 和 E=<code>2^k−1</code> 被保留。</p>
+<p>正常数实际指数上限：<code>e_max=(2^k−2)−B</code>。最大有限正数：</p>
+<pre><code class="language-text">x_max = (2−2^−f) × 2^e_max
+</code></pre>
+<p>要覆盖 <code>−218.5</code> 到 <code>+96.25</code>，正负范围对称，主要检查 <code>x_max ≥ 218.5</code>。</p>
+<p>尝试 k=4：B=7，f=11，E 的正常范围 1..14，故 e 为 −6..7。</p>
+<pre><code class="language-text">x_max = (2−2^−11)×2^7 = 255.9375 ≥ 218.5
+</code></pre>
+<p>k=3：B=3，f=12，<code>e_max=6−3=3</code>：</p>
+<pre><code class="language-text">x_max = (2−2^−12)×2^3 = 15.998046875 &lt; 218.5
+</code></pre>
+<p>更少指数位只会更不够，因此<strong>最少 k=4，B=7，f=11</strong>。这不是标准 half precision（标准半精度是 1/5/10）；本题设计的是 1/4/11。</p>
+<p>甚至两个端点本身也都可精确编码：<code>218.5=11011010.1₂</code>，<code>96.25=1100000.01₂</code>，有效位足够。不过题目只要求有限范围覆盖端点，不要求区间内每个实数都精确可表示。</p>
+<h2 id="p1-6.%20Q3(b)%EF%BC%9A%E2%88%9286.625%EF%BD%9C%E5%8E%9F%E9%A2%98%E7%AC%AC%205%20%E9%A1%B5">6. Q3(b)：−86.625｜原题第 5 页</h2><p class="slide-link">对照本地 Homework 2 原题第 5 页（原始材料未上传）</p>
+<pre><code class="language-text">86.625 = (64+16+4+2)+(.5+.125)
+       = 1010110.101₂
+       = 1.010110101₂ × 2^6
+S=1，E=6+7=13=1101₂
+F=01011010100（11 位）
+</code></pre>
+<p>完整 16 位：<strong><code>1 1101 01011010100</code></strong>，核验 <code>0xEAD4</code>。</p>
+<h2 id="p1-7.%20Q3(c)%EF%BC%9A%E6%AD%A3%E6%97%A0%E7%A9%B7%EF%BD%9C%E5%8E%9F%E9%A2%98%E7%AC%AC%206%20%E9%A1%B5">7. Q3(c)：正无穷｜原题第 6 页</h2><p class="slide-link">对照本地 Homework 2 原题第 6 页（原始材料未上传）</p>
+<p><strong>Infinity（无穷）</strong>：E 全 1，F 全 0，正数 S=0。</p>
+<p>答案：<strong><code>0 1111 00000000000</code></strong>。E 全 1 且 F 非零时是 NaN，不能混淆。</p>
+<h2 id="p1-8.%20Q3(d)%EF%BC%9A%E6%9C%80%E5%B0%8F%E4%B8%A5%E6%A0%BC%E6%AD%A3%E6%95%B0%EF%BD%9C%E5%8E%9F%E9%A2%98%E7%AC%AC%206%20%E9%A1%B5">8. Q3(d)：最小严格正数｜原题第 6 页</h2><p class="slide-link">对照本地 Homework 2 原题第 6 页（原始材料未上传）</p>
+<p>要包括 subnormal，选 E=0、F 的最低一位为 1。</p>
+<pre><code class="language-text">x_min_positive = 2^−11 × 2^(1−7) = 2^−17 = 1/131072
+bit pattern = 0 0000 00000000001
+</code></pre>
+<p>答案 <strong>2^(−17)</strong>，位串 <strong><code>0 0000 00000000001</code></strong>。最小正规格化数是 <code>2^−6</code>，它不是本题答案。</p>
+<h2 id="p1-9.%20Q3(e)%EF%BC%9A%E6%9C%80%E5%A4%A7%E7%9A%84%E7%B2%BE%E7%A1%AE%E6%AD%A3%E6%95%B4%E6%95%B0%EF%BD%9C%E5%8E%9F%E9%A2%98%E7%AC%AC%206%20%E9%A1%B5">9. Q3(e)：最大的精确正整数｜原题第 6 页</h2><p class="slide-link">对照本地 Homework 2 原题第 6 页（原始材料未上传）</p>
+<p>最大有限值 <code>255.9375</code> 不是整数。在最高指数 e=7 区间，间距 <code>Δ=2^(7−11)=1/16</code>，所以 255 是网格中的数，而 256 已超出有限范围。</p>
+<pre><code class="language-text">255 = 11111111₂ = 1.1111111₂×2^7
+S=0，E=7+7=14=1110₂
+F=11111110000（11 位）
+</code></pre>
+<p>答案 <strong>255</strong>，完整位串 <strong><code>0 1110 11111110000</code></strong>，核验 <code>0x77F0</code>。</p>
+<p>别机械使用 <code>2^(f+1)</code>：那是讨论连续整数精度时的常用边界，还必须检查这个格式的指数范围。本题范围先限制了最大整数。</p>
+<h2 id="p1-10.%20%E6%8F%90%E4%BA%A4%E5%89%8D%205%20%E5%88%86%E9%92%9F%E8%87%AA%E6%A3%80">10. 提交前 5 分钟自检</h2>
+<ul>
+<li>Q1(a) 各 16 位，Q1(b) 可表示的一项恰好 12 位；越界项只给范围解释。</li>
+<li>Q2(a) 每项 S/E/F 共 32 位，写 exact / not exact 和理由；−0.3 使用向零舍入。</li>
+<li>Q2(b) 明确写 S、有效指数、significand；非规格化用 <code>0.F</code> 和 <code>1−B</code>。</li>
+<li>Q3 写 k=4、B=7、f=11 的推导；b/c/d/e 位串恰好 16 位。</li>
+<li>所有要求过程的小题都有算式；扫描字迹、顺序、文件名和个人信息完整。</li>
+</ul>
+<h2 id="p1-11.%20%E4%B8%8D%E7%9C%8B%E5%8E%9F%E7%AD%94%E6%A1%88%E7%9A%84%E8%BF%81%E7%A7%BB%E7%BB%83%E4%B9%A0%EF%BC%8810%20%E5%88%86%E9%92%9F%EF%BC%89">11. 不看原答案的迁移练习（10 分钟）</h2>
+<ol>
+<li>写 −713 的 12 位补码，并判断 +2050 是否可表示。</li>
+<li>把 −13.25 编码为 IEEE 单精度，判断是否精确。</li>
+<li>对 12 位格式 <code>S=1, k=4, f=7</code>，求 bias、最小正非规格化数、最大有限正数、最大的可精确正整数。</li>
+</ol>
+<details><summary>完成后展开核验</summary>
+
+<ol>
+<li><code>4096−713=3383=0xD37</code>，<code>1101 0011 0111</code>；+2050 超过 2047，不能表示。</li>
+<li><code>−1101.01₂=−1.10101₂×2^3</code>，所以 <code>1 10000010 10101000000000000000000</code>，精确。</li>
+<li>B=7，最小正数 <code>2^(1−7−7)=2^−13</code>；最大有限数 <code>(2−2^−7)×2^7=255</code>，恰好也是最大的精确正整数，位串 <code>0 1110 1111111</code>。</li>
+</ol>
+</details>
+<section class="notes"><label for="note1">我的笔记｜Homework 2 逐题教学（当前浏览器自动保存）</label><textarea id="note1" data-note="1" placeholder="记录对应课件页码、规则、错因和自己的例子"></textarea></section></article><article id="part2"><h1 id="p2-MIPS%EF%BC%9A%E4%BB%8E%20C%2B%2B%20%E5%88%B0%E5%AF%84%E5%AD%98%E5%99%A8%E3%80%81%E5%86%85%E5%AD%98%EF%BC%8C%E5%86%8D%E5%88%B0%E6%9C%BA%E5%99%A8%E7%A0%81">MIPS：从 C++ 到寄存器、内存，再到机器码</h1>
+<p>主线对应 <code>lecture/COMP2611_MIPS_Fall26.pdf</code> <strong>PDF 第 1–63 页</strong>；第 64 页是 Procedure 章节封面。页码一律指 PDF 阅读器页码。配合 Tutorial 05、Lab 04–05，以及手写 MIPS 第 1–12 页阅读；手写第 18–20 页单独作为补充。</p>
+<p>学习目标：看到一段 C++，能确定变量在哪里、数据怎么移动、下一条指令在哪里；看到一段汇编，能逐行追踪；看到 32 位机器码，能还原指令。所有核心例题独立编写。代码默认采用课程示例的执行模型：<strong>不启用 delayed branching（延迟分支）</strong>；涉及 add/sub 时假定数学结果不越界，另有说明除外。</p>
+<h2 id="p2-1.%20p2%E2%80%937%EF%BC%9A%E5%85%88%E7%90%86%E8%A7%A3%20ISA%20%E6%98%AF%E4%BB%80%E4%B9%88">1. p2–7：先理解 ISA 是什么</h2><p class="slide-link">对照本地 MIPS 课件第 2 页（原始材料未上传）</p>
+<p><strong>Instruction Set Architecture / ISA（指令集体系结构）</strong> 是硬件与软件之间的接口。程序员需要知道“有多少寄存器、指令有什么效果、内存怎样寻址”，无需知道每条指令内部有多少晶体管。</p>
+<p>例如 C++ 写 <code>z=x+y</code>，汇编写 <code>add $s0,$s1,$s2</code>，机器实际读取的是一组 32 位指令。<strong>Compiler（编译器）</strong>把高层程序翻译为低层代码，<strong>assembler（汇编器）</strong>把汇编语法、标签和伪指令转成机器码。<strong>Assembly language（汇编语言）</strong>是写法，ISA 是效果和编码规则；二者有关但并不等同。</p>
+<p>MIPS 是 <strong>RISC / Reduced Instruction Set Computer（精简指令集计算机）</strong> 的教学例子。课件四个原则要联系例子记：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>原则</th>
+<th>课件位置</th>
+<th>要能解释的例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Simplicity favors regularity（简单性有利于规整性）</td>
+<td>p7,11</td>
+<td>统一的寄存器算术结构使译码简化</td>
+</tr>
+<tr>
+<td>Smaller is faster（更小往往更快）</td>
+<td>p15–16</td>
+<td>寄存器数量受限，是速度与容量的取舍</td>
+</tr>
+<tr>
+<td>Make the common case fast（加速常见情况）</td>
+<td>p24–26</td>
+<td>常量经常使用，立即数省去从内存加载</td>
+</tr>
+<tr>
+<td>Good design demands good compromises（好的设计需要折中）</td>
+<td>p54,58</td>
+<td>指令固定 32 位，但保留不同格式</td>
+</tr>
+</tbody></table></div>
+<p><strong>课件旁注</strong>：<code>ISA = programmer-visible contract; implementation can change.</code></p>
+<h2 id="p2-2.%20p9%E2%80%9316%EF%BC%9A%E4%B8%80%E6%9D%A1%E7%AE%97%E6%9C%AF%E6%8C%87%E4%BB%A4%E5%8F%AA%E5%81%9A%E4%B8%80%E5%B0%8F%E6%AD%A5">2. p9–16：一条算术指令只做一小步</h2><p class="slide-link">对照本地 MIPS 课件第 9 页（原始材料未上传）</p>
+<pre><code class="language-mips">add $s0, $s1, $s2    # $s0 = $s1 + $s2
+sub $s0, $s1, $s2    # $s0 = $s1 - $s2
+</code></pre>
+<p>第一项是 <strong>destination（目的操作数）</strong>，后两项是 <strong>source operands（源操作数）</strong>。<code>sub</code> 的顺序尤其重要。先读两个源的旧值，再写目的，故 <code>add $t0,$t0,$s1</code> 合法。</p>
+<p>MIPS 有 <strong>32 个 general-purpose registers（通用寄存器）</strong>，每个 <strong>32 位</strong>。32 是数量，32 位是每个的宽度。<strong>Word（字）</strong>在这里是 32 位，即 4 字节。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>编号</th>
+<th>本阶段用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>$zero</code></td>
+<td>0</td>
+<td>恒为 0，写入被忽略</td>
+</tr>
+<tr>
+<td><code>$v0,$v1</code></td>
+<td>2,3</td>
+<td>Lab 的 syscall 及后续返回值</td>
+</tr>
+<tr>
+<td><code>$a0..$a3</code></td>
+<td>4..7</td>
+<td>Lab 的 syscall 参数</td>
+</tr>
+<tr>
+<td><code>$t0..$t7</code></td>
+<td>8..15</td>
+<td>临时结果</td>
+</tr>
+<tr>
+<td><code>$s0..$s7</code></td>
+<td>16..23</td>
+<td>题目指定的变量</td>
+</tr>
+<tr>
+<td><code>$t8,$t9</code></td>
+<td>24,25</td>
+<td>额外临时寄存器</td>
+</tr>
+</tbody></table></div>
+<p><code>$s0</code> 与 <code>$16</code> 是同一个寄存器的两种名字。考试题给出的变量映射优先；不要凭名字假定 <code>$s0</code> 永远保存某个特定变量。</p>
+<p>连贯例子：<code>y=(a-b)+(c+9)</code>，令 y/a/b/c 分别在 <code>$s0/$s1/$s2/$s3</code>：</p>
+<pre><code class="language-mips">sub  $t0, $s1, $s2
+addi $t1, $s3, 9
+add  $s0, $t0, $t1
+</code></pre>
+<p>复杂表达式要拆成依赖关系。这里两个临时结果都要算完，最后才能合并。</p>
+<p><strong>课件旁注</strong>：<code>op destination, source1, source2; one instruction = one small step.</code></p>
+<p><strong>停下来检查</strong>：若 a=18,b=7,c=4，三行后 <code>$t0=11,$t1=13,y=24</code>。若写成 <code>sub $t0,$s2,$s1</code>，y 会变成 2。</p>
+<h2 id="p2-3.%20p17%E2%80%9320%EF%BC%9A%E6%95%B0%E7%BB%84%E9%A2%98%E7%9A%84%E6%A0%B8%E5%BF%83%E6%98%AF%E2%80%9C%E5%9C%B0%E5%9D%80%E2%80%9D%E5%92%8C%E2%80%9C%E5%86%85%E5%AE%B9%E2%80%9D%E5%88%86%E5%BC%80">3. p17–20：数组题的核心是“地址”和“内容”分开</h2><p class="slide-link">对照本地 MIPS 课件第 17 页（原始材料未上传）</p>
+<p>MIPS 是 <strong>load/store architecture（加载／存储体系结构）</strong>：算术主要处理寄存器里的值。数组通常存在 <strong>main memory（主存）</strong>；先 load 进寄存器，计算，再 store 回去。</p>
+<p><img src="assets/load_store.svg" alt="加载、计算、写回示意"></p>
+<p>内存是 <strong>byte-addressable（按字节寻址）</strong>。每个地址指向一个 byte（字节），相邻字节地址差 1；32 位整数数组相邻元素地址差 4。</p>
+<pre><code class="language-text">address of A[i] = base address of A + i × element size
+int 数组：address(A[i]) = base + 4i
+byte/char 数组：address(C[i]) = base + i
+</code></pre>
+<p>假定 A 的起始地址 <code>$s0=0x10010000</code>：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>元素</th>
+<th>地址</th>
+<th>内容（举例）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A[0]</td>
+<td>0x10010000</td>
+<td>12</td>
+</tr>
+<tr>
+<td>A[1]</td>
+<td>0x10010004</td>
+<td>7</td>
+</tr>
+<tr>
+<td>A[2]</td>
+<td>0x10010008</td>
+<td>−3</td>
+</tr>
+<tr>
+<td>A[3]</td>
+<td>0x1001000C</td>
+<td>9</td>
+</tr>
+</tbody></table></div>
+<p><code>$s0</code> 存的是 <strong>base address（基址）</strong>，不是 12。执行 <code>lw $t0,8($s0)</code> 后 <code>$t0=−3</code>，不是 0x10010008。</p>
+<p><strong>Effective address（有效地址）</strong> = 基址寄存器的值 + <strong>offset（偏移量）</strong>。偏移是<strong>字节数</strong>，<code>lw</code> 不替你乘 4。<code>lw/sw</code> 的 word 地址须 4 字节对齐，<strong>alignment（对齐）</strong>是另一个常见判断题点。</p>
+<pre><code class="language-mips">lw $t0, 8($s0)       # register &lt;- memory[base+8]
+sw $t0, 12($s0)      # memory[base+12] &lt;- register
+</code></pre>
+<p>虽然 <code>sw</code> 的第一项写在最前面，它是<strong>源寄存器</strong>，不是目的寄存器；<code>sw</code> 的目的地是内存。</p>
+<p>例：<code>A[5]=A[2]+h</code>，h 在 <code>$s1</code>：</p>
+<pre><code class="language-mips">lw  $t0, 8($s0)
+add $t0, $t0, $s1
+sw  $t0, 20($s0)
+</code></pre>
+<p><strong>课件旁注</strong>：<code>base holds an address; lw gets a value; offset is in bytes; sw writes memory.</code></p>
+<h2 id="p2-4.%20p21%E2%80%9323%EF%BC%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E5%8F%AA%E6%8E%92%E5%88%97%E5%AD%97%E8%8A%82">4. p21–23：大小端只排列字节</h2><p class="slide-link">对照本地 MIPS 课件第 21 页（原始材料未上传）</p>
+<p><strong>Endianness（字节序）</strong>讨论一个多字节数据在内存中的字节排列。把 <code>0x12345678</code> 存在地址 B：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>地址</th>
+<th>Big-endian（大端）</th>
+<th>Little-endian（小端）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B</td>
+<td>12</td>
+<td>78</td>
+</tr>
+<tr>
+<td>B+1</td>
+<td>34</td>
+<td>56</td>
+</tr>
+<tr>
+<td>B+2</td>
+<td>56</td>
+<td>34</td>
+</tr>
+<tr>
+<td>B+3</td>
+<td>78</td>
+<td>12</td>
+</tr>
+</tbody></table></div>
+<p>大端：<strong>most significant byte（最高有效字节）</strong>放低地址；小端：<strong>least significant byte（最低有效字节）</strong>放低地址。</p>
+<p>它不把每个 byte 的 8 位反过来，也不改变寄存器中作为数值解释的 <code>0x12345678</code>。如果只问寄存器计算，通常不需端序；如果问地址 B+1 的 byte，就需要。</p>
+<p><strong>课件旁注</strong>：<code>Endian changes byte order, not bit order within a byte.</code></p>
+<h2 id="p2-5.%20p24%E2%80%9329%EF%BC%9A%E7%AB%8B%E5%8D%B3%E6%95%B0%E3%80%81%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%92%8C%E7%A7%BB%E4%BD%8D">5. p24–29：立即数、位操作和移位</h2><p class="slide-link">对照本地 MIPS 课件第 24 页（原始材料未上传）</p>
+<p><strong>Immediate operand（立即操作数）</strong>是编码在指令里的常量：</p>
+<pre><code class="language-mips">addi $t0, $s1, -6    # $t0 = $s1 - 6
+addi $t1, $zero, 23  # initialize 23
+add  $t2, $s1, $zero # copy the value of $s1
+</code></pre>
+<p>没有真实 <code>subi</code>；减常数写负的 <code>addi</code>。<code>add $s0,$s0,1</code> 不能把 1 当作立即数，应该写 <code>addi</code>。<code>addi</code> 是 16 位<strong>有符号</strong>立即数，范围 <code>−32768..32767</code>。</p>
+<p><strong>Bitwise（按位）</strong>运算每个位独立处理，和 C++ 的 <code>&amp;&amp;/||</code> 不同：</p>
+<pre><code class="language-mips">and  $t0, $t1, $t2
+or   $t0, $t1, $t2
+nor  $t0, $t1, $zero   # NOT: invert every bit in $t1
+andi $t0, $t1, 0xFF    # keep the low 8 bits; clear upper bits
+ori  $t0, $t1, 0x20    # force bit 5 to 1; other bits unchanged
+</code></pre>
+<p><strong>Mask（掩码）</strong>是选定位的工具：AND 保留想要的位，OR 设置位。<code>andi/ori</code> 的 16 位 immediate 使用 <strong>zero extension（零扩展）</strong>，不同于 addi 的 <strong>sign extension（符号扩展）</strong>。例如 <code>andi $t0,$t1,0xFFFF</code> 保留低 16 位并清零高 16 位，不等于与 32 位全 1 做 AND。</p>
+<pre><code class="language-mips">sll $t0, $t1, 2       # logical left shift, low positions filled with 0
+srl $t0, $t1, 3       # logical right shift, high positions filled with 0
+</code></pre>
+<p><strong>Logical shift（逻辑移位）</strong>补 0。左移 k 位相当于乘 <code>2^k</code> 后保留低 32 位；只有不丢有效信息且不越界时才等同普通数学乘法。逻辑右移可用于无符号数除以 <code>2^k</code> 向下取整；负补码不能这样理解，例如 <code>0xFFFFFFF8</code> 的 <code>srl 1</code> 为 <code>0x7FFFFFFC</code>，不是 −4。</p>
+<p>常数乘法例：<code>b=a×9</code>，a 在 <code>$s0</code>，b 在 <code>$s1</code>：</p>
+<pre><code class="language-mips">sll $s1, $s0, 3
+add $s1, $s1, $s0
+</code></pre>
+<p>先保证 a 没被破坏。若先把 <code>$s0</code> 自己左移，再拿它补加，得到的是 16a。</p>
+<p>位域提取例：取 <code>$s1</code> 的 <strong>bits 6..13（含端点）</strong> 到 <code>$s0</code> 的低位，其余为 0，bit 0 是最低位：</p>
+<pre><code class="language-mips">sll $s0, $s1, 18      # 31-13=18; discard original bits above 13
+srl $s0, $s0, 24      # 18+6=24; move original bit 6 to bit 0
+</code></pre>
+<p>留下 8 位。通式：提取 bits i..j，左移 <code>31−j</code>，再右移 <code>31−j+i</code>。不要反过来先左移 i。</p>
+<p><strong>课件旁注</strong>：<code>addi: sign-extend; andi/ori: zero-extend; srl fills with 0.</code></p>
+<h2 id="p2-6.%20p30%E2%80%9334%EF%BC%9A%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BA%8F%E5%A6%82%E4%BD%95%E6%94%BE%E8%BF%9B%E5%86%85%E5%AD%98">6. p30–34：完整程序如何放进内存</h2><p class="slide-link">对照本地 MIPS 课件第 30 页（原始材料未上传）</p>
+<pre><code class="language-mips">.data
+A: .word 6, 10, 14, 18
+x: .word 5
+.text
+.globl main
+main:
+    la  $s0, A
+    lw  $t0, 8($s0)
+    la  $s1, x
+    lw  $t1, -12($s1)
+    sub $t2, $t0, $t1
+    sw  $t2, 0($s0)
+</code></pre>
+<p><strong>Assembler directive（汇编指示）</strong>如 <code>.data/.text/.word</code>，告诉汇编器怎样安排数据和代码；它们不是 CPU 执行的指令。<strong>Label（标签）</strong>代表地址。</p>
+<p><strong><code>la</code> / load address（装入地址）</strong>是伪指令：<code>la $s0,A</code> 得到 A 的地址。<strong><code>lw</code> / load word（装入字）</strong>得到内存中的数据。</p>
+<p>设 A 在 B，因为 <code>.word</code> 连续存放且这里均按字对齐，x 在 B+16。故 <code>−12($s1)=B+4</code>，读取 A[1]=10。程序计算 14−10=4，最终 A=<code>[4,10,14,18]</code>。</p>
+<p>这正是课件 p32–33 的重要读题方式：先画<strong>地址表</strong>，再追踪值，不要只看标签名字。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>指示</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.word</code></td>
+<td>每个数占 4 字节</td>
+</tr>
+<tr>
+<td><code>.byte</code></td>
+<td>每个数占 1 字节</td>
+</tr>
+<tr>
+<td><code>.ascii</code></td>
+<td>字符串，不自动加终止 0</td>
+</tr>
+<tr>
+<td><code>.asciiz</code></td>
+<td>字符串，末尾自动加 <code>\0</code></td>
+</tr>
+<tr>
+<td><code>.align n</code></td>
+<td>下一个数据对齐到 <code>2^n</code> 字节边界</td>
+</tr>
+<tr>
+<td><code>.globl main</code></td>
+<td>声明符号可被其他文件引用；入口仍遵循模拟器约定</td>
+</tr>
+</tbody></table></div>
+<p><strong>Pseudo-instruction（伪指令）</strong>见 Tutorial 05 p15–16：<code>la/li/move/blt/bge/not</code> 等由汇编器展开为真实指令。一行汇编可能对应多条机器指令。因此题目要求 <strong>pure / real MIPS instructions（纯／真实 MIPS 指令）</strong> 时应使用 add/addi/slt/beq 等；计算代码地址不能直接把所有源代码行都当成 4 字节。</p>
+<h2 id="p2-7.%20p36%E2%80%9340%EF%BC%9Aif%2Felse%20%E6%98%AF%E6%8E%A7%E5%88%B6%E4%B8%8B%E4%B8%80%E6%9D%A1%E6%8C%87%E4%BB%A4">7. p36–40：if/else 是控制下一条指令</h2><p class="slide-link">对照本地 MIPS 课件第 36 页（原始材料未上传）</p>
+<p>普通执行时 <strong>PC / program counter（程序计数器）</strong>走到下一条真实指令，地址一般增加 4。<strong>Branch（条件分支）</strong>和 <strong>jump（跳转）</strong>改变执行路径。</p>
+<pre><code class="language-mips">beq $s0, $s1, L       # if equal, branch to L
+bne $s0, $s1, L       # if not equal, branch to L
+j L                   # always jump to L
+</code></pre>
+<p>比较相等用的是整个寄存器值，不会修改被比较寄存器。标签可以跨越很多行。</p>
+<p>新例：<code>if(a!=b) y=a+3; else y=b-2;</code>，a/b/y 为 <code>$s0/$s1/$s2</code>：</p>
+<pre><code class="language-mips">    beq  $s0, $s1, Else   # condition false? go to else
+    addi $s2, $s0, 3
+    j    Done            # skip the else body
+Else:
+    addi $s2, $s1, -2
+Done:
+</code></pre>
+<p>正确理解：先用原条件的<strong>反面</strong>跳过 then 区域；then 执行完用 j 跳过 else。若漏掉 j，then 算好的 y 会被 else 覆盖。</p>
+<p>多层 else-if：每个条件失败都跳到下一次判断；任意一个分支成功后跳到共同出口。课件 p39 的 ElseIf 注释有笔误，第二次比较实际检查 i 与 g，而不是 i 与 j；读代码以操作数为准。</p>
+<p><strong>课件旁注</strong>：<code>branch on the opposite condition; a taken then branch must skip else.</code></p>
+<h2 id="p2-8.%20p41%E2%80%9347%EF%BC%9A%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%A4%A7%E5%B0%8F%E6%AF%94%E8%BE%83">8. p41–47：数组循环和大小比较</h2><p class="slide-link">对照本地 MIPS 课件第 41 页（原始材料未上传）</p>
+<p><strong>slt / set on less than（小于则置 1）</strong>是写入 0/1，<strong>本身不跳转</strong>。</p>
+<pre><code class="language-mips">slt  $t0, $s0, $s1   # signed comparison: $t0 = (a&lt;b) ? 1 : 0
+bne  $t0, $zero, L   # branch if a&lt;b
+</code></pre>
+<p>用两个思路即可构造四种比较：交换 a/b 得到 <code>b&lt;a</code>，交换 beq/bne 得到条件取反。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>想在条件成立时去 L</th>
+<th>测试</th>
+<th>跳转</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a &lt; b</td>
+<td><code>slt $t0,$s0,$s1</code></td>
+<td><code>bne $t0,$zero,L</code></td>
+</tr>
+<tr>
+<td>a ≥ b</td>
+<td><code>slt $t0,$s0,$s1</code></td>
+<td><code>beq $t0,$zero,L</code></td>
+</tr>
+<tr>
+<td>a &gt; b</td>
+<td><code>slt $t0,$s1,$s0</code></td>
+<td><code>bne $t0,$zero,L</code></td>
+</tr>
+<tr>
+<td>a ≤ b</td>
+<td><code>slt $t0,$s1,$s0</code></td>
+<td><code>beq $t0,$zero,L</code></td>
+</tr>
+</tbody></table></div>
+<p><code>slti</code> 把第二个比较值换成有符号立即数。<code>slt</code> 是有符号比较，位模式 <code>0xFFFFFFFF</code> 被看成 −1；若题目指定 unsigned，需要 unsigned 比较指令或另作处理，不能默认 slt 同样成立。</p>
+<p>接着做完整循环：累加 A 中所有正数。令 A 基址 <code>$s0</code>、长度 n <code>$s1</code>、下标 i <code>$s2</code>、和 sum <code>$s3</code>。所有 A 元素占 4 字节，n≥0：</p>
+<pre><code class="language-mips">    addi $s2, $zero, 0
+    addi $s3, $zero, 0
+Loop:
+    slt  $t0, $s2, $s1
+    beq  $t0, $zero, Exit  # i&gt;=n: exit before accessing A[i]
+    sll  $t1, $s2, 2       # byte offset = 4*i
+    add  $t1, $s0, $t1      # effective address
+    lw   $t2, 0($t1)       # value of A[i]
+    slt  $t3, $zero, $t2   # is A[i]&gt;0?
+    beq  $t3, $zero, Next
+    add  $s3, $s3, $t2
+Next:
+    addi $s2, $s2, 1
+    j    Loop
+Exit:
+</code></pre>
+<p>这将“变量映射 → 比较 → 地址 → load → 条件计算 → 下标更新”串起来。编译循环时先写四部分：<strong>initialization（初始化）</strong>、<strong>condition（条件）</strong>、<strong>body（循环体）</strong>、<strong>update（更新）</strong>。</p>
+<p>若 A=<code>[4,−2,0,7]</code>：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>本轮 i</th>
+<th>A[i]</th>
+<th>是否加入</th>
+<th>本轮后 sum</th>
+<th>下一轮 i</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>4</td>
+<td>是</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>−2</td>
+<td>否</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>否</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>7</td>
+<td>是</td>
+<td>11</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>不访问</td>
+<td>退出</td>
+<td>11</td>
+<td>4</td>
+</tr>
+</tbody></table></div>
+<p>最后一次条件检查仍执行，但循环体不执行。追踪题中，“某次 lw 刚执行后”的计数和“整轮执行后”的计数可能不同，必须定位时刻。</p>
+<p><strong>while vs do-while</strong>：while 先检查，所以可能执行 0 次；do-while 先做一次，再检查。<strong>for</strong>只是初始化+while+更新的重组。</p>
+<p><strong>Basic block（基本块）</strong>见 p43–44：一段指令中间没有跳转，中间也没有其他入口。可在首条指令、跳转目标、每条 branch/jump 的下一条处划分，再到下一处开始前结束。不要按“每个标签一个块”机械划分。</p>
+<p><strong>课件旁注</strong>：<code>slt produces a flag; branch uses it. Check bounds before load. Last test ≠ last iteration.</code></p>
+<h2 id="p2-9.%20p48%E2%80%9351%EF%BC%9A%E9%9B%B6%E6%AF%94%E8%BE%83%E3%80%81j%20%E4%B8%8E%20jr">9. p48–51：零比较、j 与 jr</h2><p class="slide-link">对照本地 MIPS 课件第 48 页（原始材料未上传）</p>
+<p><code>bgez/bgtz/blez/bltz</code> 分别是与零比较的 ≥、&gt;、≤、&lt; 条件分支。它们不是两寄存器 blt/bge 伪指令；前者可作为真实指令使用。</p>
+<p><code>j Label</code> 的目标直接来自指令；<strong>jr / jump register（寄存器跳转）</strong>的目标来自寄存器内容。</p>
+<p>例：已知 L 标签的真实指令地址为 <code>0x00400040</code>，执行前 <code>$t0=12</code>：</p>
+<pre><code class="language-mips">la   $s0, L
+add  $s0, $s0, $t0
+jr   $s0
+L:   addi $s1, $zero, 2  # 0x00400040
+     addi $s1, $zero, 5  # 0x00400044
+     addi $s1, $zero, 8  # 0x00400048
+     sw   $s1, 0($s2)    # 0x0040004C
+</code></pre>
+<p>jr 跳到 <code>0x0040004C</code>，跳过三个 addi；sw 保存的是 <code>$s1</code> 原有的值，不是 8。<code>jr</code> 不会帮你执行被跳过的语句。课件 p50–51 同样使用每条真实指令 4 字节来判断跳往哪里。</p>
+<p><strong>课件旁注</strong>：<code>jr uses the full address in a register; compute target in bytes.</code></p>
+<h2 id="p2-10.%20p53%E2%80%9361%EF%BC%9A%E6%9C%BA%E5%99%A8%E7%A0%81%E6%8A%8A%E5%89%8D%E9%9D%A2%E7%9A%84%E6%A6%82%E5%BF%B5%E8%A3%85%E8%BF%9B%E5%9B%BA%E5%AE%9A%E5%AD%97%E6%AE%B5">10. p53–61：机器码把前面的概念装进固定字段</h2><p class="slide-link">对照本地 MIPS 课件第 53 页（原始材料未上传）</p>
+<p><img src="assets/formats.svg" alt="R/I/J 指令格式"></p>
+<p>所有<strong>真实机器指令</strong>占 32 位。32 个寄存器需要 <code>log2(32)=5</code> 位编号；opcode 是 6 位。字段切分是一项技能，十六进制每位 4 bit 的分组不一定与字段边界对齐。</p>
+<h3 id="p2-R-format%EF%BC%88%E5%AF%84%E5%AD%98%E5%99%A8%E6%A0%BC%E5%BC%8F%EF%BC%89">R-format（寄存器格式）</h3>
+<pre><code class="language-text">opcode(6) | rs(5) | rt(5) | rd(5) | shamt(5) | funct(6)
+bits31..26 25..21  20..16  15..11   10..6      5..0
+</code></pre>
+<p><code>sub $s0,$t1,$t2</code> 对应：op=0，rs=9，rt=10，rd=16，shamt=0，funct=34。</p>
+<pre><code class="language-text">000000 01001 01010 10000 00000 100010
+hex = 0x012A8022
+</code></pre>
+<p>重点：汇编写目的在最前，编码顺序却是 <strong>rs、rt、rd</strong>。op=0 时需继续看 funct，不能把 op=0 都读成 add。</p>
+<p>移位是 R 型特例：<code>sll $t1,$t2,3</code> 的 rs=0，rt=10，rd=9，shamt=3，funct=0，机器码 <code>0x000A48C0</code>。被移位的寄存器在 rt，3 是 shamt，不是寄存器号。</p>
+<p><code>jr $s0</code> 也是 <strong>R 型</strong>，rs=16，其余寄存器字段和 shamt=0，funct=8；看到“jump”这个字不等于 J 型。</p>
+<h3 id="p2-I-format%EF%BC%88%E7%AB%8B%E5%8D%B3%E6%95%B0%E6%A0%BC%E5%BC%8F%EF%BC%89">I-format（立即数格式）</h3>
+<pre><code class="language-text">opcode(6) | rs(5) | rt(5) | immediate(16)
+</code></pre>
+<p><code>lw $t3,−20($s1)</code>：op=35，rs=17（base），rt=11（destination），imm 是 −20 的 16 位补码 <code>1111111111101100</code>：</p>
+<pre><code class="language-text">100011 10001 01011 1111111111101100
+hex = 0x8E2BFFEC
+</code></pre>
+<p>I 型没有 rd：addi/lw 的目的放 <strong>rt</strong>；sw 的数据源也放 rt，rs 仍为基址。<code>beq/bne</code> 同样是 I 型，但最后字段表达分支偏移。</p>
+<p>编码 <code>addi $t0,$t0,−7</code>：op=8,rs=8,rt=8,imm=0xFFF9，得到 <code>0x2108FFF9</code>。</p>
+<p>解码例：<code>0xAD0A000C</code> → op=43，rs=8，rt=10，imm=12 → <strong><code>sw $t2,12($t0)</code></strong>。</p>
+<p>建议按六步做：识别指令 → 选格式 → 标明各字段角色 → 查编号/op/funct → 填固定宽度二进制 → 合并并检查总位数。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>指令</th>
+<th>op（十进制）</th>
+<th>funct（R 型）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>add / sub</td>
+<td>0</td>
+<td>32 / 34</td>
+</tr>
+<tr>
+<td>and / or / nor</td>
+<td>0</td>
+<td>36 / 37 / 39</td>
+</tr>
+<tr>
+<td>sll / srl / jr</td>
+<td>0</td>
+<td>0 / 2 / 8</td>
+</tr>
+<tr>
+<td>addi / andi / ori</td>
+<td>8 / 12 / 13</td>
+<td>无</td>
+</tr>
+<tr>
+<td>lw / sw</td>
+<td>35 / 43</td>
+<td>无</td>
+</tr>
+<tr>
+<td>beq / bne</td>
+<td>4 / 5</td>
+<td>无</td>
+</tr>
+<tr>
+<td>j</td>
+<td>2</td>
+<td>无</td>
+</tr>
+</tbody></table></div>
+<p>考试提供 MIPS green sheet；重点是会用字段，不必把学习时间全用于死记 opcode。</p>
+<h3 id="p2-J-format%EF%BC%88%E8%B7%B3%E8%BD%AC%E6%A0%BC%E5%BC%8F%EF%BC%89%E5%8F%8A%E5%9C%B0%E5%9D%80%E8%AE%A1%E7%AE%97%E8%A1%A5%E5%85%85">J-format（跳转格式）及地址计算补充</h3>
+<p>J 型是 <code>opcode(6) | target(26)</code>，不是 32 位完整目标地址。正式课件 p54 提到 J，但精确的 branch/j 编码解释在后续页；手写 MIPS p19–20 已涉及。以下作为<strong>补充</strong>，优先度低于当前 p53–61 的 R/I 编码。</p>
+<pre><code class="language-text">beq/bne target = PC+4 + sign_extend(imm16)×4
+imm16 = (target−(PC+4))/4
+j target = {(PC+4)高4位, target26, 00}
+</code></pre>
+<p>注意 lw 的 offset 是字节；beq 的编码 offset 是<strong>指令字的数量</strong>。分支在 <code>0x00400020</code>，目标 <code>0x00400010</code>：<code>(0x10−0x24)/4=−5</code>，imm=0xFFFB。j 在同一 256 MiB 区域内跳到 <code>0x00400040</code> 时，target26=<code>0x00100010</code>，机器码 <code>0x08100010</code>。</p>
+<p><strong>课件旁注</strong>：<code>R: rs rt rd; I: rs rt imm. jr is R. Negative imm uses 16-bit two&#39;s complement.</code></p>
+<h2 id="p2-11.%20p62%E2%80%9363%EF%BC%9A%E5%AD%97%E8%8A%82%E3%80%81%E6%BA%A2%E5%87%BA%E4%B8%8E%E5%AD%98%E5%82%A8%E7%A8%8B%E5%BA%8F">11. p62–63：字节、溢出与存储程序</h2><p class="slide-link">对照本地 MIPS 课件第 62 页（原始材料未上传）</p>
+<p><strong>addu/subu</strong> 的 u 关键区别是<strong>不因 signed overflow（有符号溢出）产生异常</strong>，结果保留低 32 位；它们也可用于有符号位模式，不是只准操作非负数。<code>add/sub/addi</code> 在有符号溢出时会产生异常。</p>
+<p><strong>lb（load byte，加载字节）</strong>读 8 位后符号扩展到 32 位；<strong>lbu（load byte unsigned，无符号加载字节）</strong>读同样的 8 位后零扩展。若该 byte 是 0xD2：</p>
+<pre><code class="language-text">lb : 0xFFFFFFD2 → signed −46
+lbu: 0x000000D2 → 210
+</code></pre>
+<p>两者的 <strong>地址计算</strong>都仍用 signed offset；<code>lbu</code> 的 u 改变数据扩展方式，不改变 offset 的规则。<strong>sb（store byte，存储字节）</strong>只存寄存器的最低 8 位。</p>
+<p><code>sllv/srlv</code> 是 <strong>variable shift（可变移位）</strong>：移位量来自寄存器的低 5 位；<code>sllv $rd,$rt,$rs</code> 是把 rt 的值移动，rs 提供量。</p>
+<p><strong>Stored-program concept（存储程序思想）</strong>：指令和数据都以二进制存入内存，因此编译器能把程序当数据处理；同一 ISA 上的不同实现可运行兼容的机器码。不要理解成“所有二进制数据都一定是指令”：具体解释由使用场景决定。</p>
+<h2 id="p2-12.%20%E4%B8%8E%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3%E7%9A%84%20Lab%2004%E2%80%9305%EF%BC%9Asyscall%20%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2">12. 与考试相关的 Lab 04–05：syscall 和字符串</h2>
+<p>期中范围明确包括相关 labs，不能因为 syscall 不在前 63 页的主线就跳过。</p>
+<p>Lab 04 p17–25：<strong>syscall（系统调用）</strong>前先放服务号到 <code>$v0</code>，再放参数；返回值视服务而定。下表是课程 MARS 环境服务约定，不是所有操作系统通用编号。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>服务</th>
+<th><code>$v0</code></th>
+<th>参数／返回</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>print integer（打印整数）</td>
+<td>1</td>
+<td><code>$a0</code> 放整数</td>
+</tr>
+<tr>
+<td>print string（打印字符串）</td>
+<td>4</td>
+<td><code>$a0</code> 放字符串地址</td>
+</tr>
+<tr>
+<td>read integer（读整数）</td>
+<td>5</td>
+<td>调用后 <code>$v0</code> 放读到的数</td>
+</tr>
+<tr>
+<td>exit（退出）</td>
+<td>10</td>
+<td>结束程序</td>
+</tr>
+</tbody></table></div>
+<p>例：读整数后加 6，再打印：</p>
+<pre><code class="language-mips">addi $v0, $zero, 5
+syscall
+addi $t0, $v0, 6       # preserve input before replacing service number
+add  $a0, $t0, $zero
+addi $v0, $zero, 1
+syscall
+addi $v0, $zero, 10
+syscall
+</code></pre>
+<p>读入后 <code>$v0</code> 不再是服务号 5，而是输入结果；打印前需再次设置 1。字符串循环遇到 <code>.asciiz</code> 末尾的 byte 0 退出，指针每次加 <strong>1</strong>。计数字符时不把终止符算进去。</p>
+<p>Lab 05 的猜数游戏可用于理解循环：读输入 → 比较 → 更新范围 → 累加次数 → 回到循环；先保证计数器只在真正猜一次时更新。循环重复加法乘法是汇编练习，旧题的乘法硬件设计是另一内容。</p>
+<h2 id="p2-13.%20%E4%BA%94%E9%81%93%E8%AF%BE%E5%90%8E%E6%A0%B8%E9%AA%8C%EF%BC%88%E7%BA%A6%2025%20%E5%88%86%E9%92%9F%EF%BC%89">13. 五道课后核验（约 25 分钟）</h2>
+<p>这些是新题，不是旧期中题。先写答案，再展开。</p>
+<p><strong>M1.</strong> a=<code>$s0</code>，b=<code>$s1</code>，仅用这两个寄存器，实现 <code>b=12*a</code>，a 的值须保留。假定结果不越界。</p>
+<p><strong>M2.</strong> A 基址=<code>$s0</code>，i=<code>$s1</code>，h=<code>$s2</code>，实现 <code>A[i+2]=A[i]−h</code>，仅用真实指令。</p>
+<p><strong>M3.</strong> 下面 A 最终是什么？假定无延迟分支。</p>
+<pre><code class="language-mips">.data
+A: .word 3, 6, 9, 12
+.text
+la $s0, A
+addi $s1, $zero, 0
+Loop:
+slti $t0, $s1, 3
+beq $t0, $zero, Exit
+sll $t1, $s1, 2
+add $t1, $s0, $t1
+lw $t2, 0($t1)
+addi $t2, $t2, 2
+sw $t2, 4($t1)
+addi $s1, $s1, 1
+j Loop
+Exit:
+</code></pre>
+<p><strong>M4.</strong> 写出 <code>or $s2,$t0,$t3</code> 与 <code>sw $s2,−8($s0)</code> 的字段和完整机器码。</p>
+<p><strong>M5.</strong> 小端内存中 word <code>0x89ABCDEF</code> 从地址 B 开始。执行 <code>lb $t0,2($s0)</code>、<code>lbu $t1,2($s0)</code>，其中 <code>$s0=B</code>。给出两个寄存器的十六进制和 signed decimal 值。</p>
+<details><summary>M1–M5 答案及原因</summary>
+
+<p>M1：可只用三条：先得到 3a，再乘 4。</p>
+<pre><code class="language-mips">sll $s1, $s0, 1
+add $s1, $s1, $s0
+sll $s1, $s1, 2
+</code></pre>
+<p>M2：先算 A[i] 地址，再读写；A[i+2] 比 A[i] 多 8 字节。</p>
+<pre><code class="language-mips">sll $t0, $s1, 2
+add $t0, $s0, $t0
+lw  $t1, 0($t0)
+sub $t1, $t1, $s2
+sw  $t1, 8($t0)
+</code></pre>
+<p>M3：每轮写的是后一个元素；下一轮读取被上一轮改过的值。i=0 把 A[1] 改 5；i=1 把 A[2] 改 7；i=2 把 A[3] 改 9。最终 <strong>[3,5,7,9]</strong>，i=3 时先退出。不能使用数组最初的 6、9 来继续计算。</p>
+<p>M4：or 的字段 <code>0,8,11,18,0,37</code>，二进制 <code>000000 01000 01011 10010 00000 100101</code>，hex <code>0x010B9025</code>。sw 的字段 <code>43,16,18,0xFFF8</code>，二进制 <code>101011 10000 10010 1111111111111000</code>，hex <code>0xAE12FFF8</code>。</p>
+<p>M5：地址 B..B+3 的 byte 是 EF/CD/AB/89，故读取 AB。lb=<code>0xFFFFFFAB</code>，signed −85；lbu=<code>0x000000AB</code>，171。</p>
+</details>
+
+<h2 id="p2-14.%20%E5%88%B0%E4%BB%80%E4%B9%88%E7%A8%8B%E5%BA%A6%E6%89%8D%E7%AE%97%E4%BC%9A%E4%BA%86">14. 到什么程度才算会了</h2>
+<p>离开笔记，能解释为什么 A[i] 偏移为 4i；能用 slt+beq/bne 写出 ≤/≥；能画循环前后寄存器与数组表；能把 R/I 字段对上正确寄存器；能辨认指示、伪指令和真实指令；能说清 lb/lbu、sign/zero extension、addi/addu 的区别。错在哪里，就回到对应 PDF 页做一行旁注，再重做同类新题。</p>
+<section class="notes"><label for="note2">我的笔记｜MIPS 按课件精讲（当前浏览器自动保存）</label><textarea id="note2" data-note="2" placeholder="记录对应课件页码、规则、错因和自己的例子"></textarea></section></article><article id="part3"><h1 id="p3-%E5%89%8D%E5%BA%8F%E8%AF%BE%E7%A8%8B%EF%BC%9A%E5%A4%8D%E4%B9%A0%E6%96%B9%E5%90%91%E3%80%81%E8%AE%B2%E8%A7%A3%E4%B8%8E%E8%AF%BE%E4%BB%B6%E6%97%81%E6%B3%A8">前序课程：复习方向、讲解与课件旁注</h1>
+<p>考试说明来自 <code>midterm/midterm说明.docx</code> 内的截图：<strong>2026-10-22，19:30–21:00，LTB/LTC，90 分钟，占总评 30%</strong>。闭卷、闭笔记、不可用电子设备；提供 MIPS green information sheet，其他参考资料按需提供，座位 TBA。</p>
+<p>范围：Introduction、Digital Logic、Data Representation、MIPS ISA and assembly 到机器码部分约 p64，以及全部相关 tutorials/labs。以下“优先级”是根据当前材料和旧题题型作出的复习建议，<strong>不是教师公布的分值预测</strong>。</p>
+<h2 id="p3-1.%20%E8%8C%83%E5%9B%B4%E4%B8%8E%E6%97%A7%E6%9C%9F%E4%B8%AD%E9%A2%98%E7%9A%84%E5%85%B3%E7%B3%BB">1. 范围与旧期中题的关系</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>当前模块</th>
+<th>课件／练习定位</th>
+<th>旧题中可借鉴的考法</th>
+<th>复习优先级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Introduction</td>
+<td>Introduction p2–15,19,24–30；Tutorial 00</td>
+<td>2012 Q1：组成、概念判断</td>
+<td>快速巩固</td>
+</tr>
+<tr>
+<td>组合逻辑</td>
+<td>Digital Logic p7–45；Tutorial 01；Lab 01；HW1 Q1–2</td>
+<td>2012 Q3–4：表达式、PLA、NAND、MUX</td>
+<td>高</td>
+</tr>
+<tr>
+<td>时序逻辑</td>
+<td>Digital Logic p47–58；Tutorial 02；Lab 02–03；HW1 Q3–4</td>
+<td>2012 Q1 的状态容量判断；当前练习更完整</td>
+<td>高</td>
+</tr>
+<tr>
+<td>整数／浮点</td>
+<td>Data Representation p4–37；Tutorial 03–04；HW2</td>
+<td>2012 Q2：补码、扩展、特殊浮点、自定义格式</td>
+<td>高；先完成 HW2</td>
+</tr>
+<tr>
+<td>MIPS 读写与编码</td>
+<td>MIPS p2–63；Tutorial 05；Lab 04–05</td>
+<td>2012 Q6；2013 Q1/Q3/Q6(b)/Q7(a) 的相关技能</td>
+<td>高</td>
+</tr>
+</tbody></table></div>
+<p>2012 的 Performance、2013 的完整 procedure call、ALU design、multiplication hardware、single-cycle datapath，当前正式范围没有相应章节。主练习不加入这些内容。2013 的 PC-relative 远分支可作补充，不应抢占当前范围的学习时间。手写 MIPS p13–17 也涉及函数和递归，按正式范围暂不优先。</p>
+<p>两份旧题是参考题型，不是今年试卷模板：2012 为 2 小时，而今年 90 分钟。旧答案也须核对：2012 Q5(c) 把已加权的 CPI 再除 4，并在 M2 使用错误频率；正确加权 CPI 不应再除类别数量。2013 Q7 中 256 MB 不等于 64 KWords，跳转区间还要检查高位。学习推理方法，别盲抄答案。</p>
+<h2 id="p3-2.%20Introduction%EF%BC%9A%E6%95%B0%E5%88%B6%E3%80%81%E5%8D%95%E4%BD%8D%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90">2. Introduction：数制、单位和计算机组成</h2>
+<p>对应 Introduction p2–8、11–15、19。<strong>Radix/base（基数）</strong>决定每位权重：</p>
+<pre><code class="language-text">(10110.101)₂ = 16+4+2+1/2+1/8 = 22.625
+(3A.8)₁₆ = 3×16+10+8/16 = 58.5
+</code></pre>
+<p>整数转二进制：连续除 2，余数从最后往前读。小数转二进制：连续乘 2，整数部分从先到后读；不能倒序。binary↔hex 每 4 bit 一组；binary↔octal 每 3 bit 一组，分组从小数点向两边进行。</p>
+<p><strong>Bit（位）</strong>、<strong>byte（字节）</strong>、<strong>word（字）</strong>：1 byte=8 bits，本课程 MIPS 1 word=4 bytes。课件的容量换算用 1024 制，速率／频率用 1000 制；现代准确记号可写 KiB/MiB 与 kB/MB 区分。考试按题目给的单位约定计算。</p>
+<p>若容量为 2 MiB、网络速率为 8 Mbit/s，忽略开销：<code>T=2×2^20×8/(8×10^6)=2.097152 s</code>。先把 bytes 变 bits，不要漏掉 ×8。</p>
+<p><strong>Five basic components（五个基本部件）</strong>：input（输入）、output（输出）、memory（存储器）、datapath（数据通路）、control（控制器）。后两个共同构成 processor/CPU。主存保存程序和数据；datapath 做数据操作；control 指挥动作。</p>
+<p><strong>Abstraction（抽象）</strong>隐藏细节、定义层间接口；ISA 是硬件与软件的接口。不同实现可以有同一 ISA。compiler 翻译程序，operating system（操作系统）管理资源，不是同一个功能。</p>
+<p>Introduction p24–30 的技术趋势：认识 transistor（晶体管）、integrated circuit（集成电路）、Moore&#39;s Law（摩尔定律），理解技术变化使成本、容量和性能变化；别把摩尔定律当“每个程序执行时间必然固定周期减半”的保证。</p>
+<p><strong>旁注</strong>：<code>Capacity ≠ rate; bytes ≠ bits; CPU = datapath + control; ISA = interface.</code></p>
+<h2 id="p3-3.%20%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%EF%BC%9A%E4%BB%8E%E9%A2%98%E6%84%8F%E5%AE%8C%E6%95%B4%E8%B5%B0%E5%88%B0%E7%94%B5%E8%B7%AF">3. 组合逻辑：从题意完整走到电路</h2>
+<h3 id="p3-3.1%20gates%EF%BC%88%E9%97%A8%EF%BC%89%E4%B8%8E%20truth%20table%EF%BC%88%E7%9C%9F%E5%80%BC%E8%A1%A8%EF%BC%89%EF%BD%9CDigital%20Logic%20p7%E2%80%9318">3.1 gates（门）与 truth table（真值表）｜Digital Logic p7–18</h3>
+<p>Boolean algebra（布尔代数）只有 0/1，<code>+</code> 表 OR，乘号表 AND，<code>&#39;</code> 表 NOT。这里 <code>1+1=1</code>，不要当普通算术。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>AND</th>
+<th>OR</th>
+<th>XOR</th>
+<th>NAND</th>
+<th>NOR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table></div>
+<p><strong>Combinational circuit（组合电路）</strong>的稳定输出只取决于当前输入；<strong>sequential circuit（时序电路）</strong>还取决于过去保存的 state（状态）。N 个二进制输入有 <code>2^N</code> 行真值表。</p>
+<p><strong>Half adder（半加器）</strong>：S=A XOR B，C=AB；例如 1+1 的二进制为 10，即 carry=1、sum=0。它没有 carry-in（输入进位）。</p>
+<h3 id="p3-3.2%20minterm%2Fmaxterm%20%E5%92%8C%20SOP%2FPOS%EF%BD%9Cp24%E2%80%9332">3.2 minterm/maxterm 和 SOP/POS｜p24–32</h3>
+<p>完整设计步骤：题意 → 真值表 → canonical expression（规范表达式）→ 化简 → 实现 → 按真值表验证。</p>
+<p>规定变量顺序 A,B,C，A 为最高位。输入 101 是编号 5：</p>
+<pre><code class="language-text">minterm m5 = AB&#39;C      # 只有在 101 这一行等于 1
+maxterm M5 = A&#39;+B+C&#39;   # 只有在 101 这一行等于 0
+</code></pre>
+<p><strong>Minterm（最小项）</strong>：该行位为 1 用原变量，0 用反变量。<strong>Maxterm（最大项）</strong>恰好反过来。不要混淆。</p>
+<p>若 Y 在行 1,4,5,7 为 1：</p>
+<pre><code class="language-text">Canonical SOP（规范与或式）= Σm(1,4,5,7)
+Canonical POS（规范或与式）= ΠM(0,2,3,6)
+</code></pre>
+<p>两者描述同一真值表。规范表达式每项包含全部变量；化简后的 SOP 可以包含不完全项。</p>
+<p><strong>PLA / programmable logic array（可编程逻辑阵列）</strong>：AND plane（与平面）生成 product terms（乘积项），OR plane（或平面）将它们接到输出；多输出能共享乘积项。不是每个输出必须复制一套乘积项。</p>
+<h3 id="p3-3.3%20Boolean%20simplification%EF%BC%88%E5%B8%83%E5%B0%94%E5%8C%96%E7%AE%80%EF%BC%89%EF%BD%9Cp33%E2%80%9338">3.3 Boolean simplification（布尔化简）｜p33–38</h3>
+<p>必须会边推导边注明法则，HW1 就明确要求过程。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>法则</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Identity（恒等律）</td>
+<td>A+0=A，A·1=A</td>
+</tr>
+<tr>
+<td>Complement（互补律）</td>
+<td>A+A&#39;=1，AA&#39;=0</td>
+</tr>
+<tr>
+<td>Idempotence（幂等律）</td>
+<td>A+A=A，AA=A</td>
+</tr>
+<tr>
+<td>Absorption（吸收律）</td>
+<td>A+AB=A，A(A+B)=A</td>
+</tr>
+<tr>
+<td>Distributive（分配律）</td>
+<td>A(B+C)=AB+AC；A+BC=(A+B)(A+C)</td>
+</tr>
+<tr>
+<td>De Morgan（德摩根律）</td>
+<td>(AB)&#39;=A&#39;+B&#39;；(A+B)&#39;=A&#39;B&#39;</td>
+</tr>
+</tbody></table></div>
+<p>连贯例子：</p>
+<pre><code class="language-text">Y = A&#39;BC + AB&#39;C + ABC
+  = C(A&#39;B+AB&#39;+AB)          [distributive]
+  = C(A&#39;B+A(B&#39;+B))         [distributive]
+  = C(A&#39;B+A)               [complement + identity]
+  = C(A+B)                 [A+A&#39;B=(A+A&#39;)(A+B)=A+B]
+  = AC+BC                  [distributive]
+</code></pre>
+<p>转成 NAND-only（仅与非门）：<code>AC+BC=((AC)&#39;(BC)&#39;)&#39;</code>。第一级 NAND 生成 <code>(AC)&#39;</code>、<code>(BC)&#39;</code>，第二级 NAND 合并。NAND 和 NOR 都是 <strong>functionally complete（功能完备）</strong> 的：自己接同一输入就能造 NOT，再由德摩根得到其它操作。</p>
+<h3 id="p3-3.4%20K-map%EF%BC%88%E5%8D%A1%E8%AF%BA%E5%9B%BE%EF%BC%89%EF%BD%9Cp39%E2%80%9345">3.4 K-map（卡诺图）｜p39–45</h3>
+<p><img src="assets/kmap.svg" alt="卡诺图分组示意"></p>
+<p>行列必须用 <strong>Gray code（格雷码）</strong>：00,01,11,10，使相邻单元只差一个变量。边缘绕回也相邻，角与角可跨边界组成矩形；对角线不相邻。</p>
+<p>SOP 圈 1，POS 圈 0；圈必须是 <code>1,2,4,8,…</code> 个格子组成的矩形；可重叠，但不能包含不允许的 0。每圈留下不变变量，变化变量消掉。先找大圈，再确保所有 1 被覆盖；不是把 1 分成互不相交小组。</p>
+<p>例如 <code>Y=Σm(0,2,8,10,12,14)</code>，变量 A,B,C,D：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>AB \ CD</th>
+<th>00</th>
+<th>01</th>
+<th>11</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>00</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>01</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table></div>
+<p>四角圈 <code>0,2,8,10</code> 中 B=0、D=0，给 B&#39;D&#39;；另一个跨左右边的四格圈 <code>8,10,12,14</code> 中 A=1、D=0，给 AD&#39;。最终 <strong>Y=B&#39;D&#39;+AD&#39;</strong>。共用的格子 8,10 可以重复圈。</p>
+<p>7-segment display（七段显示器）题只是把某一 segment（段）的开／关转成真值表；先读清图中哪个段、哪些数字点亮，然后按上述步骤设计，不要靠背整个显示器公式。</p>
+<h3 id="p3-3.5%20MUX%2Fdecoder%2Fencoder%EF%BD%9Cp20%E2%80%9323%EF%BC%8CTutorial%2001%EF%BC%8CLab%2001%2F03">3.5 MUX/decoder/encoder｜p20–23，Tutorial 01，Lab 01/03</h3>
+<p><strong>Multiplexer / MUX（多路选择器）</strong>选择数据：<code>Y=S&#39;I0+SI1</code>，本式 S=0 选 I0，S=1 选 I1。<strong>数据位宽</strong>和<strong>select lines（选择线）数量</strong>分开看。32-bit 4-to-1 MUX 输出仍 32 bit，选择线为 2 bit；9 路至少需要 <code>ceil(log2 9)=4</code> 位控制。</p>
+<p>用 2-to-1 MUX 组成 8-to-1：先 4 个、再 2 个、最后 1 个，共 <strong>7 个</strong>；同一级共享对应选择位，共 3 个独立选择位。不要说成 7 个独立选择位。</p>
+<p><strong>Decoder（译码器）</strong>把 n-bit 编号变成 <code>2^n</code> 个 one-hot（独热）输出。输入 10 的 2-to-4 decoder，仅编号 2 输出为 1。<strong>Encoder（编码器）</strong>方向相反，普通 encoder 假设一次只有一个有效输入；多个同时有效需要 priority encoder（优先编码器）或题目给的规则。<strong>Demultiplexer / DEMUX（解复用器）</strong>把一条输入送往选定输出。</p>
+<p>Lab 03 register file（寄存器文件）将它们组合：decoder 选写哪个寄存器；MUX 选读哪个寄存器。32 个寄存器需要 5 位编号；每个 32 位，读出数据为 32 位。控制选择和数据宽度不可混淆。</p>
+<h2 id="p3-4.%20%E6%97%B6%E5%BA%8F%E9%80%BB%E8%BE%91%EF%BC%9A%E5%85%88%E5%88%A4%E5%85%83%E4%BB%B6%EF%BC%8C%E5%86%8D%E6%B2%BF%E6%97%B6%E9%97%B4%E9%87%87%E6%A0%B7">4. 时序逻辑：先判元件，再沿时间采样</h2>
+<p>对应 Digital Logic p47–58，Tutorial 02，Lab 02–03，HW1 Q3–4。</p>
+<h3 id="p3-4.1%20S-R%20latch%EF%BC%88%E7%BD%AE%E4%BD%8D%EF%BC%8F%E5%A4%8D%E4%BD%8D%E9%94%81%E5%AD%98%E5%99%A8%EF%BC%89">4.1 S-R latch（置位／复位锁存器）</h3>
+<p>对于 NOR 实现、S/R 高有效：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>S</th>
+<th>R</th>
+<th>Q_next</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>hold（保持 Q_old）</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>reset（复位到 0）</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>set（置位到 1）</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>forbidden（禁止输入）</td>
+</tr>
+</tbody></table></div>
+<p>NAND 实现通常输入为低有效的 S&#39;/R&#39;：11 保持，01 置位，10 复位，00 禁止。先看门和输入极性，别把两个表混用。禁止状态下 NOR 两输出均为 0（NAND 均为 1），已经不是互补；同时解除时最终状态不可靠。</p>
+<p><strong>Asserted（有效／激活）</strong>不一定是 1：高有效信号 asserted=1；低有效 asserted=0。</p>
+<h3 id="p3-4.2%20D%20latch%20vs%20D%20flip-flop">4.2 D latch vs D flip-flop</h3>
+<p><strong>D latch（D 锁存器）</strong>是 <strong>level-sensitive（电平敏感）</strong>：WE=1 时 transparent（透明），Q 跟随 D，WE=0 时保持。</p>
+<p><strong>D flip-flop（D 触发器）</strong>是 <strong>edge-triggered（边沿触发）</strong>：只在指定的 rising edge（上升沿）或 falling edge（下降沿）采样 D，其他时间保持。</p>
+<p>Master-slave（主从）连接：主锁存器高电平透明、从锁存器低电平透明，则主在下降沿关门，从同时开门，外部 Q 在下降沿更新。认清两个 enable 的极性即可推理，不必背“主从一定是哪种边沿”。</p>
+<p>例：Q 初始 0；下降沿依次在 t=2,6,10，D 在这些边沿前分别为 1,0,1，则下降沿 FF 的 Q 在三次边沿后依次为 1,0,1。D 在 t=4 变化，FF 不立即变；若是高有效 latch，则要看 t=4 时 WE 是否为 1。</p>
+<p><img src="assets/timing.svg" alt="锁存器与触发器的采样示意"></p>
+<p>考试忽略 propagation delay（传播延迟）时，沿处立即更新；多个 FF 同时更新：全部右侧使用<strong>边沿前旧状态</strong>。比如 <code>D0=Q1, D1=Q0 XOR Q1</code>，旧状态 Q1Q0=10，下一状态 Q1Q0=11。不能先改 Q0，再用新 Q0 算 Q1。</p>
+<h3 id="p3-4.3%20register%E3%80%81counter%20%E4%B8%8E%E5%8F%8D%E9%A6%88">4.3 register、counter 与反馈</h3>
+<p><strong>Register（寄存器）</strong>存 n-bit 值，要 n 个 1-bit 存储元件；能表示 N 个状态至少需要 <code>ceil(log2 N)</code> 位。例如 12 状态至少 4 个 FF。</p>
+<p>write-enable（写使能）寄存器可用 MUX：<code>D_next=WE×new_data + WE&#39;×old_Q</code>；WE=0 反馈旧值，所以保持。这个概念把组合电路的 MUX 与时序元件连接起来。</p>
+<p>2-bit binary counter（二进制计数器）状态顺序 <code>00→01→10→11→00</code>。按 Q1Q0 记：<code>D0=Q0&#39;</code>，<code>D1=Q1 XOR Q0</code>；低位每次翻转，高位只在旧低位为 1 时翻转。画状态表 → 对每一位分别求 next-state equation（下一状态方程）→ 接到 FF 的 D 输入。</p>
+<p>LFSR（线性反馈移位寄存器）仍用同一方法：照图写出每个 D 的旧 Q 表达式，再一次性更新。HW1 Q4 要求时序图，应先写状态序列，再把各位画成波形。</p>
+<p><strong>旁注</strong>：<code>Latch: active level. Flip-flop: active edge. All FFs read old state simultaneously.</code></p>
+<h2 id="p3-5.%20%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA%EF%BC%9A%E6%8A%8A%20HW2%20%E7%9A%84%E6%96%B9%E6%B3%95%E6%8E%A8%E5%B9%BF%E5%88%B0%E8%80%83%E8%AF%95">5. 数据表示：把 HW2 的方法推广到考试</h2>
+<h3 id="p3-5.1%20%E6%95%B4%E6%95%B0%EF%BD%9CData%20Representation%20p4%E2%80%9316%EF%BC%8CTutorial%2003">5.1 整数｜Data Representation p4–16，Tutorial 03</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>表示</th>
+<th>n 位范围</th>
+<th>负数处理</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Unsigned（无符号）</td>
+<td>0..2^n−1</td>
+<td>无负数</td>
+<td>一个</td>
+</tr>
+<tr>
+<td>Sign-magnitude（原码／符号数值）</td>
+<td>−(2^(n−1)−1)..+(2^(n−1)−1)</td>
+<td>符号位+绝对值</td>
+<td>两个</td>
+</tr>
+<tr>
+<td>One&#39;s complement（反码）</td>
+<td>同上</td>
+<td>正数逐位取反</td>
+<td>两个</td>
+</tr>
+<tr>
+<td>Two&#39;s complement（补码）</td>
+<td>−2^(n−1)..2^(n−1)−1</td>
+<td>取反加一</td>
+<td>一个</td>
+</tr>
+</tbody></table></div>
+<p>补码最高位的权重为 <code>−2^(n−1)</code>，其余为正权重。也可无符号值 U 减 <code>2^n</code>（最高位为 1 时）。负数编码使用 <code>2^n−|x|</code>。</p>
+<p><strong>Sign extension（符号扩展）</strong>复制原最高位，保持 signed value；<strong>zero extension（零扩展）</strong>高位填 0，保持 unsigned value。8-bit <code>11100101</code> 是 −27，符号扩展到 16 位是 <code>1111111111100101</code>；零扩展则表示 229。</p>
+<p>补码算术丢弃 carry-out（最高位进位），但<strong>丢弃进位不代表数学结果必然正确</strong>。signed overflow 的加法规则：同号相加结果异号；异号相加不会溢出。例如 6-bit 的 21+14=35 超过 31，位运算给 100011，按 signed 读成 −29。无符号 carry 与有符号 overflow 是两个概念。</p>
+<h3 id="p3-5.2%20%E6%B5%AE%E7%82%B9%EF%BD%9CData%20Representation%20p18%E2%80%9333%2C37%EF%BC%8CTutorial%2004">5.2 浮点｜Data Representation p18–33,37，Tutorial 04</h3>
+<p>不要把 exponent field（存储指数）当补码，也不要把浮点整个 32 位当负整数求值。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>情况</th>
+<th>E</th>
+<th>F</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Normal（规格化）</td>
+<td>1..2^k−2</td>
+<td>任意</td>
+<td><code>(−1)^S(1+F/2^f)2^(E−B)</code></td>
+</tr>
+<tr>
+<td>Subnormal（非规格化）</td>
+<td>0</td>
+<td>非零</td>
+<td><code>(−1)^S(F/2^f)2^(1−B)</code></td>
+</tr>
+<tr>
+<td>Signed zero（带符号零）</td>
+<td>0</td>
+<td>0</td>
+<td>±0</td>
+</tr>
+<tr>
+<td>Infinity（无穷）</td>
+<td>全 1</td>
+<td>0</td>
+<td>±∞</td>
+</tr>
+<tr>
+<td>NaN（非数）</td>
+<td>全 1</td>
+<td>非零</td>
+<td>NaN</td>
+</tr>
+</tbody></table></div>
+<p>Single（单精度）：1/8/23，B=127；Double（双精度）：1/11/52，B=1023。</p>
+<p><strong>Precision（精度）</strong>由有效位数量决定；<strong>range（范围）</strong>主要由指数位数量决定。总位数固定时增加指数位通常减少小数字段位数，是范围与精度的取舍。</p>
+<p>关键公式，自定义格式都能套用：</p>
+<pre><code class="language-text">B = 2^(k−1)−1
+f = total_bits−1−k
+e_min = 1−B
+e_max = (2^k−2)−B
+最小正 normal = 2^e_min
+最小正 subnormal = 2^(e_min−f)
+最大 finite = (2−2^−f)×2^e_max
+正常区间 [2^e,2^(e+1)) 的间距 Δ = 2^(e−f)
+</code></pre>
+<p>能否精确表示，先看二进制展开是否终止（有理数约分后分母只能含因子 2），再看有效位和指数范围；终止也可能因有效位太多而不精确。</p>
+<p>例如 6.375=<code>110.011₂=1.10011₂×2^2</code>，single 能精确保存。0.2 的分母为 5，会循环，不精确。间距随指数变大而变大，浮点不是均匀数轴；小数精确也不等于所有大整数精确。</p>
+<p><strong>旁注</strong>：<code>Classify E first; normal 1.F, subnormal 0.F; exponent bits control range, fraction bits precision.</code></p>
+<h3 id="p3-5.3%20ASCII%20%E5%92%8C%E5%90%8C%E4%B8%80%E4%BD%8D%E4%B8%B2%E7%9A%84%E4%B8%8D%E5%90%8C%E8%A7%A3%E9%87%8A%EF%BD%9Cp35%E2%80%9336">5.3 ASCII 和同一位串的不同解释｜p35–36</h3>
+<p>课程常用一个 byte 存一个 ASCII character（字符）；基本 ASCII 编码有 128 个、需要 7 个有效位。超过 127 的 byte 不能自动当标准 ASCII，按题目给的扩展规则解释。</p>
+<p><code>0x41</code> 作为 unsigned integer 是 65，作为 ASCII 是 &#39;A&#39;；<code>&#39;0&#39;</code> 的 ASCII 是 0x30，不是终止符 <code>\0</code> 的 0x00。</p>
+<p><code>.asciiz &quot;A 7&quot;</code> 占 4 bytes：41、20、37、00。MIPS 字符串处理用 byte 地址，每次 +1；整数数组每次 +4。同一组位也可读成 signed、unsigned、float、instruction，题目指定解释决定答案。</p>
+<h2 id="p3-6.%20%E6%80%8E%E6%A0%B7%E5%AE%89%E6%8E%92%E5%88%B0%E8%80%83%E8%AF%95%E5%89%8D">6. 怎样安排到考试前</h2>
+<p><strong>10 月 14–15 日</strong>：先做 HW2，完成后闭卷重做迁移练习；把浮点公式和特殊情况记熟。</p>
+<p><strong>10 月 16–17 日</strong>：MIPS p2–34。重点区分地址和数据，完成 M1/M2/M5；对照 Tutorial 05 和 Lab 04 单步追踪。</p>
+<p><strong>10 月 18 日</strong>：MIPS p36–63。完成 M3/M4，自己写一个 if 和一个数组循环；把编码字段写对。</p>
+<p><strong>10 月 19 日</strong>：组合逻辑：真值表、SOP/POS、K-map、PLA、MUX；时序逻辑：NOR/NAND latch、边沿、同步更新。闭卷重做 HW1 的方法，不必抄旧答案。</p>
+<p><strong>10 月 20 日</strong>：做新编综合练习，按题目建议时间计时，做完才打开解答。</p>
+<p><strong>10 月 21 日</strong>：只针对错因重做：条件读错、偏移漏乘 4、补码宽度、E=0 误用隐含 1、K-map 分组、时序误用新状态。</p>
+<p><strong>10 月 22 日考前</strong>：复核公式和常见英文指令词，练习简短英文解释。考试有 90 分钟，先取得会做的小题分数，再回头解决综合题。</p>
+<h2 id="p3-7.%20%E8%8B%B1%E6%96%87%E9%A2%98%E5%B9%B2%E8%AF%8D%EF%BC%9A%E8%AF%BB%E9%94%99%E4%B8%80%E4%B8%AA%E8%AF%8D%E5%8F%AF%E8%83%BD%E5%81%9A%E9%94%99%E6%95%B4%E9%A2%98">7. 英文题干词：读错一个词可能做错整题</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>应如何理解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>circle all correct answers</td>
+<td>多选，不是单选</td>
+</tr>
+<tr>
+<td>show relevant working / justify</td>
+<td>写算式或理由，不能只写结果</td>
+</tr>
+<tr>
+<td>exact value</td>
+<td>精确分数／幂和／终止十进制，不能随意近似</td>
+</tr>
+<tr>
+<td>at least / at most</td>
+<td>≥ / ≤，包含边界</td>
+</tr>
+<tr>
+<td>strictly positive</td>
+<td>&gt;0，排除 0</td>
+</tr>
+<tr>
+<td>inclusive</td>
+<td>包含两个端点</td>
+</tr>
+<tr>
+<td>preserve / remain unchanged</td>
+<td>必须保留旧寄存器值</td>
+</tr>
+<tr>
+<td>shortest sequence</td>
+<td>在限制条件内尽量少指令</td>
+</tr>
+<tr>
+<td>real / pure instructions</td>
+<td>不用伪指令</td>
+</tr>
+<tr>
+<td>immediately after</td>
+<td>定位到该条指令刚完成的时刻</td>
+</tr>
+<tr>
+<td>ignore propagation delay</td>
+<td>不给信号增加额外延迟</td>
+</tr>
+<tr>
+<td>representable range</td>
+<td>有限范围，不保证内部每个实数可精确表示</td>
+</tr>
+<tr>
+<td>largest exactly representable integer</td>
+<td>仍要求是整数，先检查范围再检查精度</td>
+</tr>
+</tbody></table></div>
+<p>英文解释不需长篇。例如：<strong>“The offset is 4i because each array element occupies four bytes.”</strong>；<strong>“The flip-flop samples D only on the falling edge.”</strong>；<strong>“The most significant bit is replicated to preserve the signed value.”</strong></p>
+<section class="notes"><label for="note3">我的笔记｜前序课程复习与考点（当前浏览器自动保存）</label><textarea id="note3" data-note="3" placeholder="记录对应课件页码、规则、错因和自己的例子"></textarea></section></article><article id="part4"><h1 id="p4-%E5%8E%9F%E5%88%9B%E6%9C%9F%E4%B8%AD%E7%BB%83%E4%B9%A0%EF%BC%9A12%20%E9%A2%98%EF%BC%8C100%20%E5%88%86%EF%BC%8C%E5%BB%BA%E8%AE%AE%2090%20%E5%88%86%E9%92%9F">原创期中练习：12 题，100 分，建议 90 分钟</h1>
+<p>题型参考所给 tutorial、homework、lab 与两份旧期中题的<strong>考查方式</strong>；题目、数值、程序和场景重新编写，没有直接使用旧期中题。覆盖正式范围，分值为练习用分值。英文题干配关键中文提示，训练英文考试阅读。</p>
+<p>规则：闭卷先做；允许使用 MIPS 指令参考表。MIPS 默认不启用 delayed branching，数组均正确对齐，除明确要求检查外结果不溢出。每道计算题写出过程；完成后看另一个文件 <code>05_练习答案与评分.md</code>。</p>
+<h2 id="p4-%E6%A8%A1%E5%9D%97%20A%EF%BC%9AIntroduction%20%E4%B8%8E%E6%95%B4%E6%95%B0%EF%BC%88Q1%E2%80%93Q2%EF%BC%8C14%20%E5%88%86%EF%BC%89">模块 A：Introduction 与整数（Q1–Q2，14 分）</h2>
+<h3 id="p4-Q1.%20General%20knowledge%EF%BC%886%20marks%EF%BC%9B4%20min%EF%BC%89">Q1. General knowledge（6 marks；4 min）</h3>
+<p><strong>Select all correct statements. Briefly correct each false statement.</strong>（多选，并改正错误说法）</p>
+<p>A. Datapath and control together form the processor.</p>
+<p>B. A 32-bit 16-to-1 multiplexer requires 32 select bits.</p>
+<p>C. An ISA can be shared by processors with different internal implementations.</p>
+<p>D. A three-bit state register can encode twelve distinct states.</p>
+<p>E. A machine instruction and a data word can both be represented as bit patterns.</p>
+<p>F. Converting two MiB to bits gives <code>2×2^20×8</code> bits.</p>
+<h3 id="p4-Q2.%20Two%26%2339%3Bs%20complement%20and%20extension%EF%BC%888%20marks%EF%BC%9B6%20min%EF%BC%89">Q2. Two&#39;s complement and extension（8 marks；6 min）</h3>
+<p>(a) Convert <code>1110 1001 0110</code> from <strong>12-bit two&#39;s complement</strong> to hexadecimal and signed decimal. Show working.（3）</p>
+<p>(b) Encode −118 as an <strong>8-bit two&#39;s complement</strong> pattern. Give both binary and hexadecimal.（2）</p>
+<p>(c) Sign-extend that pattern to 16 bits. Also zero-extend it and state the decimal value of the zero-extended result.（2）</p>
+<p>(d) Can +128 be represented as an 8-bit signed two&#39;s complement integer? Explain.（1）</p>
+<h2 id="p4-%E6%A8%A1%E5%9D%97%20B%EF%BC%9A%E7%BB%84%E5%90%88%E4%B8%8E%E6%97%B6%E5%BA%8F%E9%80%BB%E8%BE%91%EF%BC%88Q3%E2%80%93Q4%EF%BC%8C22%20%E5%88%86%EF%BC%89">模块 B：组合与时序逻辑（Q3–Q4，22 分）</h2>
+<h3 id="p4-Q3.%20Truth%20table%2C%20K-map%20and%20gate%20implementation%EF%BC%8812%20marks%EF%BC%9B10%20min%EF%BC%89">Q3. Truth table, K-map and gate implementation（12 marks；10 min）</h3>
+<p>The inputs are A,B,C,D, with A as the most significant bit. The output is 1 exactly for minterms <code>0,1,4,5,10,11,14,15</code>.</p>
+<p>(a) Write the canonical SOP using <code>Σm</code> and the canonical POS using <code>ΠM</code>.（3）</p>
+<p>(b) Draw a four-variable K-map, circle the largest groups and derive a simplest SOP. Use Gray-code order.（5）</p>
+<p>(c) Implement your simplified expression using <strong>only two-input NAND gates</strong>. Give the gate connections; input inversions also count as gates.（4）</p>
+<h3 id="p4-Q4.%20Storage%20elements%20and%20synchronous%20updates%EF%BC%8810%20marks%EF%BC%9B8%20min%EF%BC%89">Q4. Storage elements and synchronous updates（10 marks；8 min）</h3>
+<p>(a) A NOR S-R latch has initial Q=0. The input pairs <code>(S,R)</code> are applied in order: <code>10, 00, 01, 00</code>. Give Q after each pair has settled. Which pair is forbidden?（3）</p>
+<p>(b) For the following events, complete Q for (i) a high-level-sensitive D latch with WE=C and (ii) a falling-edge-triggered D flip-flop. Both initially have Q=0. Ignore propagation delay.（4）</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>t0</td>
+<td>C=0,D=0</td>
+</tr>
+<tr>
+<td>t1</td>
+<td>D becomes 1 while C=0</td>
+</tr>
+<tr>
+<td>t2</td>
+<td>C rises to 1; D stays 1</td>
+</tr>
+<tr>
+<td>t3</td>
+<td>D becomes 0 while C=1</td>
+</tr>
+<tr>
+<td>t4</td>
+<td>C falls to 0; D stays 0</td>
+</tr>
+<tr>
+<td>t5</td>
+<td>D becomes 1 while C=0</td>
+</tr>
+<tr>
+<td>t6</td>
+<td>C rises to 1; D stays 1</td>
+</tr>
+<tr>
+<td>t7</td>
+<td>C falls to 0; D stays 1</td>
+</tr>
+</tbody></table></div>
+<p>(c) Two rising-edge D flip-flops store Q1Q0. Their inputs are <code>D0=Q1</code> and <code>D1=Q0 XOR Q1</code>. Starting from Q1Q0=01, give the states after the next three active edges. Explain which state is used on the right-hand side.（3）</p>
+<h2 id="p4-%E6%A8%A1%E5%9D%97%20C%EF%BC%9A%E6%B5%AE%E7%82%B9%E4%B8%8E%E8%A1%A8%E7%A4%BA%E8%AE%BE%E8%AE%A1%EF%BC%88Q5%E2%80%93Q6%EF%BC%8C16%20%E5%88%86%EF%BC%89">模块 C：浮点与表示设计（Q5–Q6，16 分）</h2>
+<h3 id="p4-Q5.%20IEEE%20754%20single%20precision%EF%BC%886%20marks%EF%BC%9B5%20min%EF%BC%89">Q5. IEEE 754 single precision（6 marks；5 min）</h3>
+<p>(a) Represent +37.375 in single precision. Separate S/E/F and state whether it is exact. Show normalization.（4）</p>
+<p>(b) Decode <code>1 00000000 01000000000000000000000</code>. Give an exact expression and identify its category.（2）</p>
+<h3 id="p4-Q6.%20Design%20a%20compact%20floating-point%20format%EF%BC%8810%20marks%EF%BC%9B10%20min%EF%BC%89">Q6. Design a compact floating-point format（10 marks；10 min）</h3>
+<p>A sensor uses a <strong>12-bit</strong> IEEE-like binary floating-point format with one sign bit, k exponent bits, and all remaining bits for the fraction. Use bias <code>B=2^(k−1)−1</code>, an implicit 1 for normal numbers, and the usual reserved all-zero/all-one exponent patterns. The finite range must cover <strong>−180 to +80</strong>. It need not represent every real number in that interval exactly.</p>
+<p>(a) Find the minimum k, bias B and fraction width f. Prove that one fewer exponent bit is insufficient.（4）</p>
+<p>(b) Encode −19.5, giving all 12 bits.（2）</p>
+<p>(c) Give the smallest strictly positive representable value and all 12 bits. Include subnormal numbers.（2）</p>
+<p>(d) Give the largest exactly representable positive integer and its complete bit pattern.（2）</p>
+<h2 id="p4-%E6%A8%A1%E5%9D%97%20D%EF%BC%9A%E7%BB%84%E5%90%88%E6%A8%A1%E5%9D%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8E%92%E5%88%97%EF%BC%88Q7%E2%80%93Q8%EF%BC%8C16%20%E5%88%86%EF%BC%89">模块 D：组合模块与数据排列（Q7–Q8，16 分）</h2>
+<h3 id="p4-Q7.%20PLA%20and%20multiplexer%20construction%EF%BC%888%20marks%EF%BC%9B6%20min%EF%BC%89">Q7. PLA and multiplexer construction（8 marks；6 min）</h3>
+<p>(a) Implement two outputs <code>U=A&#39;B+AC</code> and <code>V=AC+BC&#39;</code> using a PLA. List the <strong>distinct product terms</strong> in the AND plane, then show which terms connect to each output in the OR plane.（4）</p>
+<p>(b) Build an 8-to-1 multiplexer using only 2-to-1 multiplexers. Give the number of devices, the number of independent select bits, and the selection wiring at each level.（4）</p>
+<h3 id="p4-Q8.%20Endianness%20and%20byte%20instructions%EF%BC%888%20marks%EF%BC%9B7%20min%EF%BC%89">Q8. Endianness and byte instructions（8 marks；7 min）</h3>
+<p>A <strong>little-endian</strong> machine stores word <code>0x80F17E23</code> at address B. Register <code>$s0=B</code>.</p>
+<p>(a) Give the four bytes at addresses B through B+3.（2）</p>
+<p>(b) After <code>lb $t0,2($s0)</code> and <code>lbu $t1,2($s0)</code>, give both registers in 8-digit hexadecimal and signed decimal.（4）</p>
+<p>(c) If <code>$t2=0x1234ABCD</code>, execute <code>sb $t2,1($s0)</code>. Give the new word reconstructed by <code>lw $t3,0($s0)</code>.（2）</p>
+<h2 id="p4-%E6%A8%A1%E5%9D%97%20E%EF%BC%9AMIPS%20%E7%BF%BB%E8%AF%91%E3%80%81%E8%BF%BD%E8%B8%AA%E4%B8%8E%E7%BC%96%E7%A0%81%EF%BC%88Q9%E2%80%93Q12%EF%BC%8C42%20%E5%88%86%EF%BC%89">模块 E：MIPS 翻译、追踪与编码（Q9–Q12，42 分）</h2>
+<h3 id="p4-Q9.%20Write%20a%20MIPS%20loop%EF%BC%8810%20marks%EF%BC%9B10%20min%EF%BC%89">Q9. Write a MIPS loop（10 marks；10 min）</h3>
+<p>Translate the following C-like code using only <strong>real MIPS instructions</strong>. The base address of the null-terminated byte string is in <code>$s0</code>; use <code>$s1</code> for count. ASCII &#39;0&#39;=48 and &#39;9&#39;=57. You may use temporary registers. Keep <code>$s0</code> unchanged.</p>
+<pre><code class="language-cpp">count = 0;
+p = str;
+while (*p != &#39;\0&#39;) {
+    if (*p &gt;= &#39;0&#39; &amp;&amp; *p &lt;= &#39;9&#39;) count++;
+    p++;
+}
+</code></pre>
+<p>(a) Write the loop.（8）</p>
+<p>(b) For <code>.asciiz &quot;A7 b2C!&quot;</code>, give the final count and the total number of bytes occupied by the declaration.（2）</p>
+<h3 id="p4-Q10.%20Trace%20and%20modify%20an%20array%20loop%EF%BC%8810%20marks%EF%BC%9B10%20min%EF%BC%89">Q10. Trace and modify an array loop（10 marks；10 min）</h3>
+<p>Read this program. <code>$s0</code> is the base address of the four-word array <code>A=[−3,6,−1,4]</code>.</p>
+<pre><code class="language-mips">    addi $s1, $zero, 0
+    addi $s2, $zero, 0
+Loop:
+    slti $t0, $s1, 4
+    beq  $t0, $zero, Exit
+    sll  $t1, $s1, 2
+    add  $t1, $s0, $t1
+    lw   $t2, 0($t1)
+    slt  $t3, $t2, $zero
+    beq  $t3, $zero, Next
+    sub  $t2, $zero, $t2
+    sw   $t2, 0($t1)
+    addi $s2, $s2, 1
+Next:
+    addi $s1, $s1, 1
+    j    Loop
+Exit:
+</code></pre>
+<p>(a) State the purpose of the program in one sentence.（2）</p>
+<p>(b) Give final A, <code>$s1</code>, and <code>$s2</code>.（3）</p>
+<p>(c) Give <code>$s2</code> <strong>immediately after</strong> the third execution of <code>lw</code> and before the following <code>slt</code>.（2）</p>
+<p>(d) Change <strong>one instruction only</strong> so that zeros are also counted, while nonnegative values remain unchanged and negative values still become positive. Give the replacement instruction and justify it.（3）</p>
+<h3 id="p4-Q11.%20Machine%20code%EF%BC%888%20marks%EF%BC%9B8%20min%EF%BC%89">Q11. Machine code（8 marks；8 min）</h3>
+<p>Encode (a) <code>add $s3,$t2,$s0</code> and (b) <code>lw $t1,−12($s2)</code> in binary fields and hexadecimal. Show field names and register numbers. Each part is 4 marks.</p>
+<p>Reference: add has op=0, funct=32; lw has op=35. <code>$t1=9,$t2=10,$s0=16,$s2=18,$s3=19</code>.</p>
+<h3 id="p4-Q12.%20Instruction%20categories%20and%20MARS%20services%EF%BC%884%20marks%EF%BC%9B6%20min%EF%BC%89">Q12. Instruction categories and MARS services（4 marks；6 min）</h3>
+<p>(a) Classify each as an assembler directive, a pseudo-instruction, or a real machine instruction: <code>.word</code>, <code>la</code>, <code>sll</code>, <code>jr</code>.（2）</p>
+<p>(b) The following MARS code is intended to read an integer and immediately print it. Identify the missing register transfer and insert it at the correct position.（2）</p>
+<pre><code class="language-mips">addi $v0, $zero, 5
+syscall
+addi $v0, $zero, 1
+syscall
+</code></pre>
+<h2 id="p4-%E5%81%9A%E5%AE%8C%E5%90%8E%E8%AE%B0%E5%BD%95%E4%BD%A0%E7%9A%84%E9%94%99%E5%9B%A0">做完后记录你的错因</h2>
+<p>每道错题写一句：“我错在 __；应该在 __ 之前先检查 __。”如果一个模块少于约 70% 分数，回到该模块课件，重做讲解中的核验题；次日遮住答案再做一次。</p>
+<section class="notes"><label for="note4">我的笔记｜原创分模块练习（当前浏览器自动保存）</label><textarea id="note4" data-note="4" placeholder="记录对应课件页码、规则、错因和自己的例子"></textarea></section></article><article id="part5"><details class="answers"><summary>完成练习后，点击展开完整答案与评分</summary><h1 id="p5-%E5%8E%9F%E5%88%9B%E7%BB%83%E4%B9%A0%E7%AD%94%E6%A1%88%E4%B8%8E%E8%AF%84%E5%88%86%E8%A6%81%E7%82%B9">原创练习答案与评分要点</h1>
+<p>对应 <code>04_原创分模块练习.md</code>。建议先独立做题。本页给参考解法，汇编允许等效实现；评分按语义和题目限制判断，不按与参考代码的相似程度判断。</p>
+<h2 id="p5-Q1%EF%BC%886%20%E5%88%86%EF%BC%89">Q1（6 分）</h2>
+<p>正确：<strong>A,C,E,F</strong>。</p>
+<p>B 错：16 路选择需要 4 位选择信号，32 位是数据宽度。D 错：3 bit 只能编码 8 个状态；12 状态至少 4 bit。每项判断及必要改正 1 分。</p>
+<h2 id="p5-Q2%EF%BC%888%20%E5%88%86%EF%BC%89">Q2（8 分）</h2>
+<p>(a) Hex=<strong>0xE96</strong>。无符号 U=<code>14×256+9×16+6=3734</code>，signed x=<code>3734−4096=−362</code>。（hex 1，过程及值 2）</p>
+<p>(b) <code>256−118=138=0x8A</code>，<strong><code>1000 1010</code></strong>。（过程／位串 1，hex 1）</p>
+<p>(c) Sign extension：<code>1111 1111 1000 1010</code>，值仍 −118。Zero extension：<code>0000 0000 1000 1010</code>，值 <strong>138</strong>。（各 1）</p>
+<p>(d) 不可，8-bit signed 范围为 <strong>[−128,127]</strong>。（1）</p>
+<h2 id="p5-Q3%EF%BC%8812%20%E5%88%86%EF%BC%89">Q3（12 分）</h2>
+<p>(a) <strong>Σm(0,1,4,5,10,11,14,15)</strong>；<strong>ΠM(2,3,6,7,8,9,12,13)</strong>。（SOP 1，POS 2）</p>
+<p>(b) K-map：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>AB \ CD</th>
+<th>00</th>
+<th>01</th>
+<th>11</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>00</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>01</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table></div>
+<p>圈 <code>{0,1,4,5}</code>：A=0,C=0，留下 A&#39;C&#39;。圈 <code>{10,11,14,15}</code>：A=1,C=1，留下 AC。<strong>Y=A&#39;C&#39;+AC</strong>。（表 2，圈 2，式 1）</p>
+<p>(c) 一个五门实现：</p>
+<pre><code class="language-text">nA=NAND(A,A)=A&#39;
+nC=NAND(C,C)=C&#39;
+p=NAND(nA,nC)=(A&#39;C&#39;)&#39;
+q=NAND(A,C)=(AC)&#39;
+Y=NAND(p,q)=A&#39;C&#39;+AC
+</code></pre>
+<p>题目未要求最少门数。上面明确给出五个两输入 NAND 门，其中用于反相的门也计数。（反相 1，product 两门 2，末级 1）</p>
+<h2 id="p5-Q4%EF%BC%8810%20%E5%88%86%EF%BC%89">Q4（10 分）</h2>
+<p>(a) Q 依次 <strong>1,1,0,0</strong>；NOR 的 forbidden pair 为 <strong>11</strong>。（序列 2，禁止输入 1）</p>
+<p>(b) 每个事件刚完成后的输出：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>C</th>
+<th>D</th>
+<th>高有效 D latch 的 Q</th>
+<th>下降沿 FF 的 Q</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>t0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>t1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>t2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>t3</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>t4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>t5</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>t6</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>t7</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table></div>
+<p>Latch 在 C=1 区间跟随；FF 只在 t4,t7 采样。（每种元件 2）</p>
+<p>(c) 下一状态方程 <code>(Q1_next,Q0_next)=(Q0 XOR Q1,Q1)</code>：</p>
+<pre><code class="language-text">01 → 10 → 11 → 01
+</code></pre>
+<p>所有右侧都用同一边沿前旧状态，不能顺序更新。（序列 2，解释 1）</p>
+<h2 id="p5-Q5%EF%BC%886%20%E5%88%86%EF%BC%89">Q5（6 分）</h2>
+<p>(a) <code>37.375=100101.011₂=1.00101011₂×2^5</code>，S=0，E=5+127=132=<code>10000100</code>，F=<code>00101011000000000000000</code>。</p>
+<p><strong><code>0 10000100 00101011000000000000000</code></strong>，精确：二进制终止且 8 位小数足够。hex 核验 0x42158000。（规格化 1，E 1，S/F 1，精确性理由 1）</p>
+<p>(b) E=0,F≠0，subnormal。S=1，有效指数 −126，significand=<code>0.01₂=2^−2</code>，所以 <strong>−2^(−128)</strong>。（分类 1，精确表达式和过程 1）</p>
+<h2 id="p5-Q6%EF%BC%8810%20%E5%88%86%EF%BC%89">Q6（10 分）</h2>
+<p>(a) k=3：B=3，f=8，e_max=3，最大有限值 <code>(2−2^−8)×8=15.96875</code>，不够。</p>
+<p>k=4：B=7，f=7，e_max=7，最大有限值 <code>(2−2^−7)×128=255</code>，足够覆盖 −180..80。最少 <strong>k=4,B=7,f=7</strong>。（字段 2，范围证明 2）</p>
+<p>(b) <code>19.5=10011.1₂=1.00111₂×2^4</code>，S=1，E=4+7=11=<code>1011</code>，F=<code>0011100</code>。答案 <strong><code>1 1011 0011100</code></strong>。（规格化 1，位串 1）</p>
+<p>(c) 最小正值选 E=0、F最低位为 1：<code>2^(1−7−7)=2^−13</code>。位串 <strong><code>0 0000 0000001</code></strong>。（值和过程 1，位串 1）</p>
+<p>(d) 最大有限值 255 已是整数，能精确表示；256 越界。答案 <strong>255</strong>，<strong><code>0 1110 1111111</code></strong>。（解释及值 1，位串 1）</p>
+<h2 id="p5-Q7%EF%BC%888%20%E5%88%86%EF%BC%89">Q7（8 分）</h2>
+<p>(a) 与平面的三个独立乘积项：P1=A&#39;B，P2=AC，P3=BC&#39;。U 接 P1/P2；V 接 P2/P3；P2 共享。（各正确项共 2，输出连接各 1）</p>
+<p>(b) <strong>7 个 MUX，3 个独立选择位 S2S1S0</strong>。第一级四个 MUX 分别选择 (I0,I1)、(I2,I3)、(I4,I5)、(I6,I7)，共享 S0。第二级两个 MUX 共享 S1；第三级一个 MUX 用 S2。二进制编号 S2S1S0 选对应 I。（数量 1，选择位 1，连接 2）</p>
+<h2 id="p5-Q8%EF%BC%888%20%E5%88%86%EF%BC%89">Q8（8 分）</h2>
+<p>(a) B..B+3 为 <strong>23,7E,F1,80</strong>。（2）</p>
+<p>(b) 两条均读取 F1=<code>11110001</code>：lb 符号扩展成 <strong>0xFFFFFFF1，−15</strong>；lbu 零扩展成 <strong>0x000000F1，241</strong>。（每条 2）</p>
+<p>(c) sb 只写最低 byte CD，到 B+1。新的 bytes：23,CD,F1,80；lw 重建 word <strong>0x80F1CD23</strong>。（写入位置 1，word 1）</p>
+<h2 id="p5-Q9%EF%BC%8810%20%E5%88%86%EF%BC%89">Q9（10 分）</h2>
+<p>一种真实指令实现如下。用 <code>$t0</code> 作指针，不破坏 <code>$s0</code>；<code>lbu</code> 将 byte 当无符号字符。</p>
+<pre><code class="language-mips">    add  $t0, $s0, $zero
+    addi $s1, $zero, 0
+Loop:
+    lbu  $t1, 0($t0)
+    beq  $t1, $zero, Exit
+    slti $t2, $t1, 48
+    bne  $t2, $zero, Next   # char &lt; &#39;0&#39;
+    slti $t2, $t1, 58
+    beq  $t2, $zero, Next   # char &gt;= 58, therefore &gt; &#39;9&#39;
+    addi $s1, $s1, 1
+Next:
+    addi $t0, $t0, 1
+    j    Loop
+Exit:
+</code></pre>
+<p>上界用 <code>&lt;58</code>，包含 &#39;9&#39;=57。退出检查在计数之前，终止 0 不计数。（初始化并保留基址 1，加载＋终止 2，两侧范围各 1，计数 1，字节指针与循环 2，共 8）</p>
+<p><code>&quot;A7 b2C!&quot;</code> 有 7 个可见字符，数字只有 7 和 2，最终 count=<strong>2</strong>；加一个终止 0，占 <strong>8 bytes</strong>。（各 1）</p>
+<h2 id="p5-Q10%EF%BC%8810%20%E5%88%86%EF%BC%89">Q10（10 分）</h2>
+<p>(a) 把数组中的负数替换为其相反数，并统计被替换的负数数量。（2）</p>
+<p>(b) A=<strong>[3,6,1,4]</strong>，<code>$s1=4</code>，<code>$s2=2</code>。（各 1）</p>
+<p>(c) 第三次 lw 刚完成，已经处理过 −3 和 6，当前载入 −1，但尚未处理它。因此 <code>$s2=1</code>。（时刻解释 1，数值 1）</p>
+<p>(d) 将 <code>slt $t3,$t2,$zero</code> 换成 <strong><code>slti $t3,$t2,1</code></strong>。这是有符号整数，<code>x&lt;1</code> 等价于 <code>x≤0</code>。负数和零进入计数路径，零取反仍是零，正数跳过。（替换 2，解释 1）</p>
+<h2 id="p5-Q11%EF%BC%888%20%E5%88%86%EF%BC%89">Q11（8 分）</h2>
+<p>(a) R 型：op=0,rs=10,rt=16,rd=19,shamt=0,funct=32。</p>
+<pre><code class="language-text">000000 01010 10000 10011 00000 100000
+hex = 0x01509820
+</code></pre>
+<p>(b) I 型：op=35,rs=18,rt=9,imm=−12。16 位补码 <code>65536−12=65524=0xFFF4</code>。</p>
+<pre><code class="language-text">100011 10010 01001 1111111111110100
+hex = 0x8E49FFF4
+</code></pre>
+<p>每小题：格式及角色 1，寄存器号 1，二进制字段 1，hex 1。等值位串分组写法允许，但必须总长 32 位。</p>
+<h2 id="p5-Q12%EF%BC%884%20%E5%88%86%EF%BC%89">Q12（4 分）</h2>
+<p>(a) <code>.word</code> 是 directive，<code>la</code> 是 pseudo-instruction，<code>sll</code> 和 <code>jr</code> 是 real instructions；jr 是 R 型。（每项 0.5）</p>
+<p>(b) 在读入 syscall <strong>之后、设置 <code>$v0=1</code> 之前</strong>插入：</p>
+<pre><code class="language-mips">add $a0, $v0, $zero
+</code></pre>
+<p>读取结果在 <code>$v0</code>；打印参数在 <code>$a0</code>。若先用服务号 1 覆盖 <code>$v0</code>，原输入已丢失。（传输 1，位置及原因 1）</p>
+<h2 id="p5-%E8%A1%A5%E5%85%85%E6%8C%91%E6%88%98%EF%BC%9A%E5%9C%B0%E5%9D%80%E7%BC%96%E7%A0%81%EF%BC%88%E4%B8%8D%E8%AE%A1%E5%85%A5%20100%20%E5%88%86%EF%BC%89">补充挑战：地址编码（不计入 100 分）</h2>
+<p>这部分对应手写 MIPS p19–20，正式 MIPS 详细讲解在后续页；核心练习正确后再做。</p>
+<ol>
+<li>beq 位于 0x00400030，目标 0x00400018，求 signed immediate。答案 <code>(0x18−0x34)/4=−7</code>，16 位编码 0xFFF9。</li>
+<li>提取原寄存器 bits 9..20（含端点）到低位，其他位清零，只用两次逻辑移位。答案左移 11，再右移 20，留下 12 位。</li>
+</ol>
+<h2 id="p5-%E6%8A%8A%E5%88%86%E6%95%B0%E8%BD%AC%E6%88%90%E5%A4%8D%E4%B9%A0%E5%8A%A8%E4%BD%9C">把分数转成复习动作</h2>
+<ul>
+<li>Q1–2 不稳：复习数制、宽度、范围和扩展，再闭卷做 HW2 Q1。</li>
+<li>Q3–4 不稳：先补真值表与 minterm，再练 K-map；时序先圈有效边沿、写旧状态。</li>
+<li>Q5–6 不稳：先分类 E，再用公式；回到 Homework 2 逐题教学。</li>
+<li>Q7–8 不稳：画选择线／数据线、字节地址表，避免只记名词。</li>
+<li>Q9–12 不稳：按变量映射、地址、值、控制流、编码五层逐个排查。</li>
+</ul>
+</details><section class="notes"><label for="note5">我的笔记｜答案与评分（当前浏览器自动保存）</label><textarea id="note5" data-note="5" placeholder="记录对应课件页码、规则、错因和自己的例子"></textarea></section></article></main><footer>基于所提供的 COMP2611 Fall 2026 材料。页码均为 PDF 阅读器页码。</footer><script>const prefix='comp2611-fall26-';document.querySelectorAll('textarea').forEach(t=>{try{t.value=localStorage.getItem(prefix+t.dataset.note)||''}catch(e){}t.addEventListener('input',()=>{try{localStorage.setItem(prefix+t.dataset.note,t.value)}catch(e){document.getElementById('status').textContent='自动保存不可用，请下载笔记备份。'}})});document.getElementById('download').onclick=()=>{let text='COMP2611 我的复习笔记\n\n';document.querySelectorAll('textarea').forEach(t=>{text+=t.previousElementSibling.textContent+'\n'+t.value+'\n\n'});let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));a.download='COMP2611_我的复习笔记.txt';a.click();URL.revokeObjectURL(a.href)};document.getElementById('print').onclick=()=>{document.querySelectorAll('details').forEach(x=>x.open=true);window.print()};</script></body></html>
