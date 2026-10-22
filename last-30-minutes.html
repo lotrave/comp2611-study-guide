@@ -1,0 +1,430 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>COMP2611 考前30分钟速看</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#eef2f5;color:#25374b;font:16px/1.85 'Microsoft YaHei',sans-serif}header{padding:28px max(25px,calc((100% - 1050px)/2));background:#122f4b;color:#fff}header .eyebrow{color:#9bd4df;font-size:13px;letter-spacing:2px}header h1{font-size:29px;color:#fff;margin:8px 0}header p{margin:5px 0;color:#d7e8f0}.control{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #c5d6df;padding:10px 22px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}button{font:inherit;font-size:13px;cursor:pointer;border:1px solid #a8c4d3;background:#fff;color:#15516d;border-radius:5px;padding:5px 11px}button.primary{background:#126481;color:white;border-color:#126481}#timer{font:700 23px Consolas,monospace;color:#124c6b;min-width:110px}#progress{font-size:13px;color:#45657c}nav{max-width:1100px;margin:20px auto 0;display:flex;gap:7px;flex-wrap:wrap;padding:0 18px}nav a{padding:5px 10px;background:#deebf1;color:#1b5872;border-radius:4px;text-decoration:none;font-size:13px}main{max-width:1100px;margin:18px auto;padding:0 18px}.chapter{padding:30px 42px;background:#fff;margin:0 0 22px;border:1px solid #d9e3e9;border-radius:9px;scroll-margin-top:95px}h1{font-size:27px;line-height:1.5;color:#173d59}h2{font-size:25px;color:#14516c;border-bottom:3px solid #d1e7ec;padding-bottom:12px;margin-top:6px}h3{font-size:20px;color:#23495e;margin-top:36px}p{overflow-wrap:anywhere}strong{color:#144f6b}pre{padding:17px 19px;background:#112e46;color:#eaf6ff;border-radius:6px;line-height:1.65;overflow-x:auto;max-width:100%;break-inside:avoid}code{font-family:Consolas,'Microsoft YaHei',monospace;font-size:.93em;background:#edf3f6;padding:1px 4px;border-radius:3px;overflow-wrap:anywhere}pre code{padding:0;background:none;white-space:pre;overflow-wrap:normal}table{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0}th,td{padding:9px 12px;border:1px solid #d5e0e7;text-align:left;vertical-align:top}th{background:#eaf3f7;color:#194f66}.table-wrap{max-width:100%;overflow:auto}blockquote{margin:18px 0;padding:12px 20px;background:#fff7e6;border-left:4px solid #d7a147;color:#4c422e}blockquote p{margin:4px 0}details{margin:20px 0;border:1px solid #acd1db;border-radius:7px;background:#f5fbfc;padding:12px 20px}summary{cursor:pointer;color:#11647c;font-weight:bold}details h3{margin-top:25px}.formula{background:#edf6fa;border-left:4px solid #18708c;padding:16px 20px;margin:20px 0;font-family:Consolas,'Microsoft YaHei',monospace;line-height:2.2;font-size:17px;overflow:auto}sup{font-size:.75em;line-height:0}.completion{margin-top:28px;padding-top:16px;border-top:1px dashed #b4c8d4;color:#1d6478;font-size:14px}input[type=checkbox]{width:17px;height:17px;vertical-align:middle;margin-right:8px}footer{padding:20px;text-align:center;color:#496778;font-size:13px}.notes{border:1px solid #c7dbe3;background:white;border-radius:8px;padding:25px 35px;margin:20px 0}textarea{width:100%;min-height:150px;resize:vertical;font:15px/1.7 'Microsoft YaHei',sans-serif;border:1px solid #b2cbd7;padding:12px;border-radius:5px}.notes label{display:block;margin-bottom:12px}a{color:#125f7e}@media(max-width:700px){header{padding:25px 20px}header h1{font-size:23px}.chapter{padding:22px 19px}main{padding:0 8px}h2{font-size:22px}h3{font-size:18px}table{min-width:470px;font-size:13px}.control{padding:7px;gap:6px}#timer{font-size:20px;min-width:94px}.formula{font-size:14px}nav{padding:0 10px}.notes{padding:20px}}@media print{body{background:white;font-size:10.5pt}header{background:white;padding:0;color:#173d59}header h1{color:#173d59;font-size:22pt}header p,header .eyebrow{color:#345b70}.control,nav,.notes,.completion,footer{display:none}main{padding:0;margin:0;max-width:none}.chapter{padding:0;border:0;break-before:page}.chapter:first-child{break-before:auto}h1,h2,h3,summary{break-after:avoid}h2{font-size:18pt}h3{font-size:13pt}table{font-size:9pt;min-width:0}th,td{padding:5px}.table-wrap{overflow:visible}pre{background:#eef3f6;color:#17354c;white-space:pre-wrap}pre code{white-space:pre-wrap}.formula{font-size:11pt}details{background:white;border:1px solid #b5c8d2}blockquote{background:#faf8f0}}@media(hover:none){button,summary{min-height:44px}}.chapter{scroll-margin-top:110px}</style></head><body><header><div class="eyebrow">COMP2611 / FINAL 30 MINUTES</div><h1>考前30分钟速看</h1><p>必记公式 · MIPS模板 · 易错点 · 七题自测</p></header><div class="control"><button id="toggle">展开补充与答案</button><button id="print">打印或保存为PDF</button><a href="#part5">跳到最后一屏</a><a href="https://lotrave.github.io/comp2611-study-guide/three-hour.html">三小时完整教材</a></div><nav><a href="#part0">阅读顺序</a><a href="#part1">MIPS 12分钟</a><a href="#part2">逻辑 7分钟</a><a href="#part3">表示 6分钟</a><a href="#part4">自测 3分钟</a><a href="#part5">最后一屏 2分钟</a></nav><main><section class="chapter" id="part0"><h1>COMP2611 考前30分钟速看</h1>
+<p>这份用于进考场前最后一轮复习。按顺序看公式、代码模板和易错点；遇到不会的题，先写能确定的字段、地址或分类步骤。<strong>中文理解，英文关键词识别，计算题保留过程。</strong></p>
+<p>本次范围：Introduction、Digital Logic、Data Representation、MIPS 到机器码约 p64，含相关 tutorials/labs。Branch/jump 精确编码放在补充栏；函数栈、递归、乘除法硬件、完整 datapath 和 Performance 不占本轮复习时间。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>时间</th>
+<th>阅读内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–12 分钟</td>
+<td>MIPS 指令、数组、控制流、编码</td>
+</tr>
+<tr>
+<td>12–19 分钟</td>
+<td>Boolean、K-map、MUX、latch/FF</td>
+</tr>
+<tr>
+<td>19–25 分钟</td>
+<td>补码、IEEE 754、自定义浮点</td>
+</tr>
+<tr>
+<td>25–28 分钟</td>
+<td>七个一分钟以内自测</td>
+</tr>
+<tr>
+<td>28–30 分钟</td>
+<td>最后一屏与答题检查</td>
+</tr>
+</tbody></table></div>
+</section><section class="chapter" id="part1"><h2>0至12分钟 MIPS必须抓住的规则</h2>
+<h3>寄存器与指令方向</h3>
+<p><strong>32 个通用 registers，每个 32 bits；1 word=4 bytes。</strong> <code>$zero</code> 恒为 0。题目指定哪个寄存器代表哪个变量，就按题目映射。</p>
+<pre><code class="language-mips">add  $t0, $s0, $s1    # $t0 = $s0 + $s1
+sub  $t0, $s0, $s1    # $t0 = $s0 - $s1
+addi $t0, $s0, -7     # $t0 = $s0 - 7；没有真实 subi
+sll  $t0, $s0, 2      # 左移2位；低位补0
+srl  $t0, $s0, 2      # 逻辑右移；高位补0
+</code></pre>
+<p><strong>先读源旧值，再写目的。</strong> <code>add $t0,$t0,$s1</code> 合法；<code>add ... ,1</code> 不能把 1 当立即数，应该用 addi。srl 对负补码不能当普通除法。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>容易混淆</th>
+<th>必须记住</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>add/sub/addi 与 addu/subu/addiu</td>
+<td>前者 signed overflow 异常；后者忽略该异常，保留低32位</td>
+</tr>
+<tr>
+<td>addi/addiu 的 immediate</td>
+<td>都是16位符号扩展，不因 u 改为零扩展</td>
+</tr>
+<tr>
+<td>andi/ori 的 immediate</td>
+<td>16位零扩展</td>
+</tr>
+<tr>
+<td>andi mask</td>
+<td>1 保留、0 清零；ori 的1强制置1</td>
+</tr>
+<tr>
+<td>nor t,s,zero</td>
+<td>对 s 的32位逐位取反</td>
+</tr>
+<tr>
+<td>la、li、move、blt</td>
+<td>通常为 pseudo-instructions，由 assembler 展开</td>
+</tr>
+<tr>
+<td>.data、.text、.word、.asciiz</td>
+<td>directives，布局指示，不是CPU执行的指令</td>
+</tr>
+</tbody></table></div>
+<h3>数组先算地址 再读取内容</h3>
+<div class="formula">int 数组：address(A[i]) = base + 4i<br>byte 或 char 数组：address(C[i]) = base + i</div>
+
+<p><strong>Base address（基址）是地址，offset（偏移量）以 bytes 为单位。</strong> lw 不自动把 offset 乘 4。word 访问通常要求地址是 4 的倍数。</p>
+<pre><code class="language-mips">la $s0, A          # $s0 = A的地址，不是A[0]
+lw $t0, 8($s0)     # $t0 = A[2]
+sw $t0, 12($s0)    # A[3] = $t0；第一项是数据源
+</code></pre>
+<p><strong>最常用模板：</strong><code>A[i+1]=A[i]+h</code>，base/i/h 在 <code>$s0/$s1/$s2</code>：</p>
+<pre><code class="language-mips">sll $t0, $s1, 2
+add $t0, $s0, $t0    # $t0 = address of A[i]
+lw  $t1, 0($t0)
+add $t1, $t1, $s2
+sw  $t1, 4($t0)      # A[i+1] 多4 bytes
+</code></pre>
+<p><strong>旧题锚点：</strong>2013 Q1(2) 中 <code>[0,1,2,3,4,5]</code>，先取 base+16 的 word，再写到该地址−4：读取 A[4]=4，写 A[3]，结果 <code>[0,1,2,4,4,5]</code>。抓住“地址→下标→值→写入位置”四步。</p>
+<h3>条件和循环用反条件退出</h3>
+<pre><code class="language-mips">slt $t0, $s0, $s1   # $t0 = (a&lt;b) ? 1 : 0；本身不跳转
+bne $t0, $zero, L   # a&lt;b 时去L
+beq $t0, $zero, L   # a&gt;=b 时去L
+</code></pre>
+<p><strong>a&gt;b：交换比较两项，判断 b&lt;a。a≤b：判断 b&lt;a 是否为假。</strong> beq 比相等，bne 比不等；bgtz/blez/bgez/bltz 是与零比较。</p>
+<pre><code class="language-mips"># if(a&lt;b) y=a; else y=b;
+    slt $t0, $s0, $s1
+    beq $t0, $zero, Else
+    add $s2, $s0, $zero
+    j Done                  # then完成后跳过else
+Else:
+    add $s2, $s1, $zero
+Done:
+</code></pre>
+<p><strong>循环检查清单：初始化 → 条件失败去 Exit → body → 更新 → 回 Loop。</strong></p>
+<pre><code class="language-mips"># base=$s0, n=$s1, i=$s2, sum=$s3
+    addi $s2, $zero, 0
+    addi $s3, $zero, 0
+Loop:
+    slt  $t0, $s2, $s1
+    beq  $t0, $zero, Exit
+    sll  $t1, $s2, 2
+    add  $t1, $s0, $t1
+    lw   $t2, 0($t1)
+    add  $s3, $s3, $t2
+    addi $s2, $s2, 1
+    j Loop
+Exit:
+</code></pre>
+<p>执行 n 轮 body，一般检查条件 n+1 次。<strong>Immediately after lw</strong> 只意味着刚读入，后面的加法／计数可能还没执行。内存被 sw 改写后，下一轮要读新值。以上按课程示例，不启用 delayed branching。</p>
+<p><strong>Basic block（基本块）</strong>：中间没有跳转，也没有其他分支入口；入口、跳转目标、跳转后下一条可成为块的开头。</p>
+<h3>字节序和syscall</h3>
+<p>Word <code>0x80F17E23</code> 从地址 B 开始：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>地址</th>
+<th>Little-endian 小端</th>
+<th>Big-endian 大端</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B</td>
+<td>23</td>
+<td>80</td>
+</tr>
+<tr>
+<td>B+1</td>
+<td>7E</td>
+<td>F1</td>
+</tr>
+<tr>
+<td>B+2</td>
+<td>F1</td>
+<td>7E</td>
+</tr>
+<tr>
+<td>B+3</td>
+<td>80</td>
+<td>23</td>
+</tr>
+</tbody></table></div>
+<p>小端机器从 B+2 读 F1：<strong>lb → 0xFFFFFFF1（−15）</strong>；<strong>lbu → 0x000000F1（241）</strong>。sb 只写寄存器最低8位。端序改变字节排列，不反转字节内部的 bits。</p>
+<p><strong>ASCII：</strong>空格=0x20，&#39;0&#39;=0x30，&#39;9&#39;=0x39；终止符 <code>\0</code>=0。<code>.asciiz</code> 自动多占一个终止字节；字符串指针每轮 +1，word 数组每轮 +4。</p>
+<p><strong>MARS syscall：</strong><code>$v0</code> 服务号：1 打印整数（值放 <code>$a0</code>），4 打印字符串（地址放 <code>$a0</code>），5 读整数（结果回 <code>$v0</code>），10 退出。读完后先转存结果，再覆盖服务号：</p>
+<pre><code class="language-mips">add  $a0, $v0, $zero
+addi $v0, $zero, 1
+syscall
+</code></pre>
+<h3>机器码先写字段角色</h3>
+<pre><code class="language-text">R: op(6) | rs(5) | rt(5) | rd(5) | shamt(5) | funct(6)
+I: op(6) | rs(5) | rt(5) | immediate(16)
+J: op(6) | target(26)
+</code></pre>
+<p><strong>汇编 <code>add rd,rs,rt</code>，R编码却是 rs、rt、rd。</strong> I型没有 rd；lw/addi 的目的在 rt；sw 的数据源也在 rt，rs 仍是基址。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>记什么</th>
+<th>数值／规则</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>寄存器编号</td>
+<td>zero=0；v0=2；a0=4；t0..t7=8..15；s0..s7=16..23；t8/t9=24/25</td>
+</tr>
+<tr>
+<td>R型常用funct</td>
+<td>add=32，sub=34，and=36，or=37，nor=39；op=0</td>
+</tr>
+<tr>
+<td>sll/srl</td>
+<td>R型；rs=0，rt为被移位数，rd为结果；funct=0/2</td>
+</tr>
+<tr>
+<td>jr</td>
+<td>R型，rs存完整目标地址，funct=8</td>
+</tr>
+<tr>
+<td>I型op</td>
+<td>addi=8；andi=12；ori=13；lw=35；sw=43；beq=4；bne=5</td>
+</tr>
+<tr>
+<td>j</td>
+<td>op=2；不要因为jr里有jump就把jr当J型</td>
+</tr>
+</tbody></table></div>
+<p><strong>核对例：</strong><code>add $t0,$s1,$s2</code>：</p>
+<pre><code class="language-text">op rs rt rd shamt funct = 0,17,18,8,0,32
+000000 10001 10010 01000 00000 100000
+hex = 0x02324020
+</code></pre>
+<p>负 immediate 先按 <strong>16位补码</strong>编码，再填字段。绿卡能查 opcode；优先保证格式、角色、位数写对。</p>
+<details><summary>补充速记 Branch和jump地址编码</summary>
+
+<pre><code class="language-text">branch imm = (target − (PC+4))/4
+branch target = PC+4 + sign_extend(imm16)×4
+</code></pre>
+<p>PC 是分支本身地址；基准是 PC+4；字段存 word 位移。例 PC=0x00400020，target=0x00400010：imm=−20/4=−5，16位=0xFFFB。</p>
+<pre><code class="language-text">j target26 = (target_address &gt;&gt; 2) &amp; 0x03FFFFFF
+实际目标 = {(PC+4)高4位, target26, 00}
+</code></pre>
+<p><strong>先右移2位再取26位。</strong> jr 则直接使用寄存器里的完整地址。提取 bits i..j（含端点）到低位：先 sll <code>31−j</code>，再 srl <code>31−j+i</code>；保留位数 <code>j−i+1</code>。</p>
+</details>
+
+</section><section class="chapter" id="part2"><h2>12至19分钟 逻辑电路抓住方法</h2>
+<h3>Boolean和SOP POS</h3>
+<p><code>+</code> 是 OR，连写是 AND，<code>&#39;</code> 是 NOT。<strong>1+1=1。</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>法则</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Complement 互补</td>
+<td>A+A&#39;=1；AA&#39;=0</td>
+</tr>
+<tr>
+<td>Absorption 吸收</td>
+<td>A+AB=A；A(A+B)=A</td>
+</tr>
+<tr>
+<td>Distributive 分配</td>
+<td>A(B+C)=AB+AC；A+BC=(A+B)(A+C)</td>
+</tr>
+<tr>
+<td>De Morgan 德摩根</td>
+<td>(AB)&#39;=A&#39;+B&#39;；(A+B)&#39;=A&#39;B&#39;</td>
+</tr>
+</tbody></table></div>
+<p><strong>minterm 在指定行=1；maxterm 在指定行=0。</strong> ABC=101：<code>m5=AB&#39;C</code>，<code>M5=A&#39;+B+C&#39;</code>。SOP 把输出为1的 minterms 相加；POS 把输出为0的 maxterms 相乘。</p>
+<p><strong>2012 Q3 的正确化简结果是 AB&#39;+C，B 的反号不能丢。</strong> 检验反例：A=1,B=0,C=0 时，AB&#39;+C=1，而 AB+C=0。</p>
+<p>NAND-only 的模板：<code>XY+Z=((XY)&#39;Z&#39;)&#39;</code>。先生成乘积的反相，再末级 NAND 合并；输入反相可用 <code>NAND(A,A)</code>。题目说“加 NOT 门”与“只能 NAND”时，门数不同。</p>
+<p><strong>PLA：</strong>AND plane 生成乘积项；OR plane 决定每个输出接哪些项。多个输出可共享乘积项。</p>
+<h3>K map和MUX</h3>
+<p><strong>K-map 行列 Gray 顺序：00,01,11,10。</strong> SOP 圈1、POS圈0；每圈为1/2/4/8…格矩形；边缘可环绕、角可相邻、对角线不相邻；可以重叠；保留圈内不变变量，消掉变化变量。</p>
+<p><strong>MUX 选择数据；decoder 将编号变成 one-hot 输出。</strong> <code>2^n</code> 路至少需 n 个选择位；数据宽度与选择宽度不同。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>题型</th>
+<th>立刻写出的结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4-to-1 MUX由2-to-1组成</td>
+<td>3个器件、最少2个独立选择位</td>
+</tr>
+<tr>
+<td>8-to-1 MUX由2-to-1组成</td>
+<td>7个器件、3个选择位</td>
+</tr>
+<tr>
+<td>32-bit 4-to-1 MUX</td>
+<td>输出32 bits，选择2 bits</td>
+</tr>
+<tr>
+<td>32寄存器选写</td>
+<td>5-to-32 decoder</td>
+</tr>
+<tr>
+<td>编码N个状态</td>
+<td>至少 ceil(log2 N) 个1-bit FF</td>
+</tr>
+</tbody></table></div>
+<p>原题若把每个小MUX的控制信号独立列出，按给定控制信号数量列完整真值表；不要把“最少共享控制位”直接当作原图的输入个数。</p>
+<h3>Latch和flip flop</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>元件</th>
+<th>必会规则</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NOR SR latch</td>
+<td>S,R=00保持；10置1；01清0；11禁止</td>
+</tr>
+<tr>
+<td>NAND低有效SR latch</td>
+<td>S&#39;,R&#39;=11保持；01置1；10清0；00禁止</td>
+</tr>
+<tr>
+<td>高有效D latch</td>
+<td>WE=1时透明，Q跟随D；WE=0保持</td>
+</tr>
+<tr>
+<td>D flip-flop</td>
+<td>只在指定上升沿或下降沿采样D，其余保持</td>
+</tr>
+</tbody></table></div>
+<p><strong>多个FF同时更新，全部使用边沿前的旧状态。</strong> 先写 <code>Q_next=逻辑函数(Q_old,input)</code>，再一起更新，不能边改边算。Asserted=有效；低有效信号 asserted 时是0。</p>
+</section><section class="chapter" id="part3"><h2>19至25分钟 数字表示抓住分类</h2>
+<h3>补码范围和扩展</h3>
+<div class="formula">n-bit unsigned：0 至 2<sup>n</sup>−1<br>n-bit two's complement：−2<sup>n−1</sup> 至 2<sup>n−1</sup>−1</div>
+
+<p>负数编码：<code>2^n−|x|</code>，或固定n位取反加1。读负补码：先得 unsigned U，再算 <code>U−2^n</code>。符号扩展复制最高位；零扩展高位补0。</p>
+<p><strong>Signed overflow：同号相加得到异号；或直接检查数学结果是否越界。</strong> carry-out 与 signed overflow 不等价。8-bit signed 范围 −128..127；+128不能表示，不能给截断答案。</p>
+<h3>IEEE先分类E</h3>
+<p>Single：<strong>1/8/23，bias=127</strong>；Double：<strong>1/11/52，bias=1023</strong>。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>E字段</th>
+<th>F字段</th>
+<th>数值／类别</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>非全0且非全1</td>
+<td>任意</td>
+<td>normal：<code>(−1)^S×1.F×2^(E−B)</code></td>
+</tr>
+<tr>
+<td>全0</td>
+<td>非0</td>
+<td>subnormal：<code>(−1)^S×0.F×2^(1−B)</code></td>
+</tr>
+<tr>
+<td>全0</td>
+<td>全0</td>
+<td>+0或−0</td>
+</tr>
+<tr>
+<td>全1</td>
+<td>全0</td>
+<td>+∞或−∞</td>
+</tr>
+<tr>
+<td>全1</td>
+<td>非0</td>
+<td>NaN</td>
+</tr>
+</tbody></table></div>
+<p><strong>E不是补码；subnormal没有隐含1，指数用1−B。</strong> <code>1.F</code> 指二进制数，例如1.101₂=1+1/2+1/8，不是十进制1.101。</p>
+<p>编码顺序：十进制→二进制→<code>1.xxx×2^e</code>→S→E=e+B→去掉隐含1保存F→补足位数。负浮点只改S，不对整个32位取补码。</p>
+<p><strong>精确性 Exactness：</strong>二进制是否终止、有效位是否放得下、指数是否在范围内，三个都检查。分数约分后的分母含5等非2因子时，二进制不终止。<strong>Toward zero（向零舍入）</strong>截断有效位不进位；对负数，结果应更接近0。</p>
+<h3>自定义浮点先拆开指数</h3>
+<p>总位数N，1位符号、k位指数、f=N−1−k位小数：</p>
+<div class="formula">B = 2<sup>k−1</sup>−1<br>E<sub>max</sub> = 2<sup>k</sup>−2<br>e<sub>max</sub> = E<sub>max</sub>−B<br>x<sub>max finite</sub> = (2−2<sup>−f</sup>) × 2<sup>e<sub>max</sub></sup><br>x<sub>min normal</sub> = 2<sup>1−B</sup><br>x<sub>min positive</sub> = 2<sup>1−B−f</sup></div>
+
+<p><strong>最小严格正数包含subnormal时，用最后一条，不是最小normal。</strong> 正常区间 <code>[2^e,2^(e+1))</code> 的间距是 <code>2^(e−f)</code>。</p>
+<p>HW2 的1/4/11格式：B=7，最大有限255.9375，最小正数2^(−17)，最大精确正整数255。<strong>最大有限值不一定是整数；最大精确整数也不等于“之前每个整数都能表示”。</strong></p>
+</section><section class="chapter" id="part4"><h2>25至28分钟 七个快速自测</h2>
+<p>先看题，每题思考约20秒，再展开核对；错题只回看相应规则。</p>
+<ol>
+<li>base=<code>$s0</code>，<code>lw $t0,20($s0)</code> 读取int数组第几项？</li>
+<li><code>slt $t0,$s0,$s1</code> 后，什么分支表示 a≥b 时去L？</li>
+<li><code>0 00000000 10000000000000000000000</code> 的single精确值？</li>
+<li>8-bit <code>11110110</code> 的signed值和符号扩展16位结果？</li>
+<li>简化 <code>A&#39;B+AB+AC</code>。</li>
+<li>上升沿FF旧Q1Q0=10，D0=Q1，D1=Q0 XOR Q1，下一状态？</li>
+<li><code>sw $t1,−8($s2)</code> 的rs、rt、16-bit immediate分别是什么？</li>
+</ol>
+<details><summary>展开七题答案</summary>
+
+<ol>
+<li><strong>A[5]</strong>，20/4=5。</li>
+<li><strong>beq $t0,$zero,L</strong>，因为a&lt;b为假。</li>
+<li><strong>2^(−127)</strong>，<code>0.1₂×2^(−126)</code>。</li>
+<li>unsigned246，signed246−256=<strong>−10</strong>；扩展为 <strong>11111111 11110110</strong>。</li>
+<li><code>B(A&#39;+A)+AC</code> 化简为 <strong>B+AC</strong>。</li>
+<li><strong>11</strong>，两个D都使用旧Q1=1,Q0=0。</li>
+<li><strong>rs=18，rt=9，imm=0xFFF8</strong>；rs为基址，rt为待存的数据。</li>
+</ol>
+</details>
+
+</section><section class="chapter" id="part5"><h2>28至30分钟 最后一屏</h2>
+<p><strong>看见题目先圈三件事：类型、位宽、要求的时刻。</strong> 读清 signed/unsigned、exact、real instructions、preserve、immediately after。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>英文指令词</th>
+<th>答题动作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>circle all correct</td>
+<td>多选；别按单选做</td>
+</tr>
+<tr>
+<td>show working / justify</td>
+<td>写关键算式或理由，不只写答案</td>
+</tr>
+<tr>
+<td>exact value</td>
+<td>精确分数、2的幂之和或精确十进制</td>
+</tr>
+<tr>
+<td>strictly positive</td>
+<td>排除0</td>
+</tr>
+<tr>
+<td>inclusive</td>
+<td>位提取包含两端；位数j−i+1</td>
+</tr>
+<tr>
+<td>preserve</td>
+<td>不覆盖指定寄存器的旧值</td>
+</tr>
+<tr>
+<td>real / pure MIPS</td>
+<td>避免la/li/move/blt等伪指令</td>
+</tr>
+<tr>
+<td>immediately after</td>
+<td>只执行到指定指令刚结束</td>
+</tr>
+</tbody></table></div>
+<p><strong>概念题一眼分清：</strong>CPU=datapath+control；五部件还包括input/output/memory。ISA是软硬件接口，允许不同内部实现。n位byte地址空间最多2^n bytes；容量换word要再除4。clock period=1/frequency；2GHz对应0.5ns。</p>
+<p><strong>过程分模板：</strong>补码写范围→变换；浮点写S/E/F类别→有效数→实际指数→数值；电路写表达式→所用法则→化简；MIPS写寄存器映射→有效地址→值→更新；编码写格式→字段→二进制→hex。</p>
+<p><strong>交卷前检查：</strong>位数是否足够；反号是否丢了；word offset是否乘4；负immediate是否16位补码；sw是否写对位置；if是否漏j；循环是否更新；FF是否用旧值；subnormal是否误用1.F。</p>
+<p>本速看文档提炼自已生成的三小时教材与所提供课程材料；旧题锚点仅作方法定位。所有原教材继续保留。</p>
+</section></main><footer>本页为独立速看文档，原备考手册与三小时教材均保留。</footer><script>document.getElementById('toggle').onclick=()=>{let a=[...document.querySelectorAll('details')],o=a.some(x=>!x.open);a.forEach(x=>x.open=o);document.getElementById('toggle').textContent=o?'折叠补充与答案':'展开补充与答案'};document.getElementById('print').onclick=()=>{document.querySelectorAll('details').forEach(x=>x.open=true);window.print()};</script></body></html>
